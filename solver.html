@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Letter Quest Solver 2.1.0</title>
+        <meta name="author" content="Meszerus">
+        <meta name="description" content="Achievement-hunting tool for the Xbox One game 'Letter Quest'">
+        <link rel="stylesheet" href="./solver.css" />
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+                crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+        <script src="./script/controller/init.js"></script>
+    </head>
+    <body>
+        <h1>Letter Quest Solver</h1>
+        <noscript>
+            <p>If you can see this message, then the tool is broken! Oopsie! This could be because:</p>
+            <ul>
+                <li>You have Javascript disabled in your browser.</li>
+                <li>Your browser version is old and doesn't support modern Javascript (ECMAScript 2018).</li>
+            </ul>
+        </noscript>
+        <div id="tabs" class="tabs">
+            <button name="main" class="tablink">Main Game</button>
+            <button name="hangman" class="tablink">Hangman</button>
+        </div>
+        <div id="mode_main" class="tabcontent">
+            <div>
+                <div name="gameplay" class="parallel problem"><!-- Populated at runtime --></div>
+                <table name="results" class="parallel solution invisible">
+                    <tr name="heading">
+                        <th>Result</th>
+                        <th>Relevance</th>
+                        <th><!-- Actions --></th>
+                    </tr>
+                    <!-- Populated at runtime -->
+                </table>
+            </div>
+            <div name="actions">
+                <button name="reset">Reset</button>
+                <button name="solve">Solve!</button>
+            </div>
+        </div>
+        <div id="mode_hangman" class="tabcontent">
+            <div>
+                <div name="gameplay" class="parallel problem">
+                    <div name="guess"><!-- Populated at runtime --></div>
+                    <div name="length">
+                        <p class="descriptor">Word length: <span name="currentLength">10</span></p>
+                        <button name="minus">-</button>
+                        <button name="plus">+</button>
+                    </div>
+                    <div name="incorrectGuess">
+                        <p class="descriptor">Letters incorrectly guessed:</p>
+                        <div name="alphabet"><!-- Populated at runtime --></div>
+                    </div>
+                </div>
+                <table name="results" class="parallel solution invisible">
+                    <tr name="heading">
+                        <th>Result</th>
+                    </tr>
+                    <!-- Populated at runtime -->
+                </table>
+            </div>
+            <div name="actions">
+                <button name="reset">Reset</button>
+                <button name="solve">Solve!</button>
+            </div>
+        </div>
+        <p id="info"><!-- Populated at runtime --></p>
+        <p id="instructions">
+            <strong>Instruction:</strong>
+            Fill in the tiles and their status as they appear in your game.
+            Then hit "Solve" to obtain word matches that best work for you.
+        </p>
+        <label for="achievements">Achievement-hunting config: <span id="toggleAchievementsPanel" class="link">show</span></label>
+        <div id="achievements">
+            <p>Select only the achievements you have yet to unlock, so the tool can be quicker and better prioritise solutions, and you can pop them quicker.</p>
+            <p>The tool will attempt to identify when each have likely popped and automatically unselect them. This function can be disabled in the Advanced Config.</p>
+            <input type="checkbox" id="achievement_allPlaguedOut" name="achievement" value="allPlaguedOut" checked="checked" />
+            <label for="achievement_allPlaguedOut">
+                <strong>All Plagued Out</strong>: Fill the entire board with plague tiles.
+            </label>
+            <br />
+            <input type="checkbox" id="achievement_aManAPlan" name="achievement" value="aManAPlan" checked="checked" />
+            <label for="achievement_aManAPlan">
+                <strong>A Man, A Plan</strong>: Spell 25 palindromes.
+            </label>
+            <br />
+            <input type="checkbox" id="achievement_crystalConqueror" name="achievement" value="crystalConqueror" checked="checked" />
+            <label for="achievement_crystalConqueror">
+                <strong>Crystal Conqueror</strong>: Spelled a word containing two or more crystals.
+            </label>
+            <br />
+            <input type="checkbox" id="achievement_ehEeeEyeOweYou" name="achievement" value="ehEeeEyeOweYou" checked="checked" />
+            <label for="achievement_ehEeeEyeOweYou">
+                <strong>Eh Eee Eye Owe You</strong>: Use 2,500 vowels.
+            </label>
+            <br />
+            <input type="checkbox" id="achievement_feelingReallyGood" name="achievement" value="feelingReallyGood" checked="checked" />
+            <label for="achievement_feelingReallyGood">
+                <strong>Feeling Really Good</strong>: Spell 200 double-letter words.
+            </label>
+            <br />
+            <input type="checkbox" id="achievement_honoraryBaconBandit" name="achievement" value="honoraryBaconBandit" checked="checked" />
+            <label for="achievement_honoraryBaconBandit">
+                <strong>Honorary Bacon Bandit</strong>: Spell the word Bandits.
+            </label>
+            <br />
+            <input type="checkbox" id="achievement_inTheCorner" name="achievement" value="inTheCorner" checked="checked" />
+            <label for="achievement_inTheCorner">
+                <strong>In The Corner</strong>: Use 500 corner letters.
+            </label>
+            <br />
+            <input type="checkbox" id="achievement_itsBacon" name="achievement" value="itsBacon" checked="checked" />
+            <label for="achievement_itsBacon">
+                <strong>It's Bacon</strong>: Spell the word Bacon.
+            </label>
+            <br />
+            <input type="checkbox" id="achievement_myPrecious" name="achievement" value="myPrecious" checked="checked" />
+            <label for="achievement_myPrecious">
+                <strong>My Precious</strong>: Use 100 crystal tiles.
+            </label>
+            <br />
+            <input type="checkbox" id="achievement_octoberfest" name="achievement" value="octoberfest" checked="checked" />
+            <label for="achievement_octoberfest">
+                <strong>Octoberfest</strong>: Spelled 5 eight-letter words.
+            </label>
+            <br />
+            <input type="checkbox" id="achievement_prevention" name="achievement" value="prevention" checked="checked" />
+            <label for="achievement_prevention">
+                <strong>Prevention</strong>: Use 25 plague tiles.
+            </label>
+            <br />
+            <input type="checkbox" id="achievement_rowYourBoat" name="achievement" value="rowYourBoat" checked="checked" />
+            <label for="achievement_rowYourBoat">
+                <strong>Row Row Row Your Boat</strong>: Used an entire row in one word 3 times.
+            </label>
+            <br />
+            <input type="checkbox" id="achievement_seeYouInSeptember" name="achievement" value="seeYouInSeptember" checked="checked" />
+            <label for="achievement_seeYouInSeptember">
+                <strong>See You In September</strong>: Spelled 10 seven-letter words.
+            </label>
+            <br />
+            <input type="checkbox" id="achievement_sixPack" name="achievement" value="sixPack" checked="checked" />
+            <label for="achievement_sixPack">
+                <strong>Six Pack</strong>: Spell 50 six-letter words.
+            </label>
+            <br />
+            <input type="checkbox" id="achievement_topShelf" name="achievement" value="topShelf" checked="checked" />
+            <label for="achievement_topShelf">
+                <strong>Top Shelf</strong>: Use 500 letters from the top row.
+            </label>
+            <br />
+            <input type="checkbox" id="achievement_why" name="achievement" value="why" checked="checked" />
+            <label for="achievement_why">
+                <strong>Why</strong>: Spell 3 words with no vowels.
+            </label>
+            <br />
+            <input type="checkbox" id="achievement_yayEverydayRoyalty" name="achievement" value="yayEverydayRoyalty" checked="checked" />
+            <label for="achievement_yayEverydayRoyalty">
+                <strong>Yay Everyday Royalty</strong>: Spell a word that contains two Ys.
+            </label>
+            <br />
+            <span id="configAchievementsAll" class="link">Select all</span>
+            <br />
+            <span id="configAchievementsNone" class="link">Select none</span>
+        </div>
+<!--        <br />-->
+<!--        <label for="advanced">Advanced config: <span id="toggleAdvancedPanel" class="link">show</span></label>-->
+<!--        <div id="advanced">-->
+        </div>
+        <footer>
+            Made by <a href="https://www.trueachievements.com/gamer/Meszerus" target="_blank">Meszerus</a>.
+            My other work can be found on <a href="https://github.com/Meszerus" target="_blank">Github</a>.
+        </footer>
+        <script src="script/controller/handlers.js"></script>
+        <script src="script/controller/info.js"></script>
+        <script src="script/controller/mode.js"></script>
+        <script src="script/controller/mode-hangman/alphabet.js"></script>
+        <script src="script/controller/mode-hangman/guess.js"></script>
+        <script src="script/controller/mode-hangman/handlers.js"></script>
+        <script src="script/controller/mode-hangman/result.js"></script>
+        <script src="script/controller/mode-main/achievements.js"></script>
+        <script src="script/controller/mode-main/effect.js"></script>
+        <script src="script/controller/mode-main/handlers.js"></script>
+        <script src="script/controller/mode-main/letter.js"></script>
+        <script src="script/controller/mode-main/point.js"></script>
+        <script src="script/controller/mode-main/result.js"></script>
+        <script src="script/model/mode-hangman/solver.js"></script>
+        <script src="script/model/main-mode/solver.js"></script>
+        <script src="script/model/main-mode/weight-util.js"></script>
+        <script src="script/model/main-mode/letter-weight.js"></script>
+        <script src="script/model/main-mode/word-weight.js"></script>
+    </body>
+</html>
