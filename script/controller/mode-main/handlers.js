@@ -1,4 +1,5 @@
-$("#mode_main div[name='gameplay']").on("keypress", "input[name='letter']", function() {
+$("#mode_main div[name='gameplay']").on("keyup", "input[name='letter']", function() {
+    autoPoint($(this));
     focusNextEmptyLetter($(this));
 });
 
