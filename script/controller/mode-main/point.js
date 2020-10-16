@@ -10,7 +10,7 @@ const DEFAULT_POINT_FOR_LETTER = {
     "F": 2,
     "G": 1,
     "H": 2,
-    "I": 0, // todo
+    "I": 1,
     "J": 3,
     "K": 3,
     "L": 1,
@@ -21,7 +21,7 @@ const DEFAULT_POINT_FOR_LETTER = {
     "Q": 3,
     "R": 1,
     "S": 1,
-    "T": 0, // todo
+    "T": 1,
     "U": 1,
     "V": 2,
     "W": 2,

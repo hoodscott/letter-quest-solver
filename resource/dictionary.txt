@@ -43141,7 +43141,6 @@ obviate
 obvious
 occlude
 occults
-oceania
 oceanic
 ocelots
 octagon
@@ -47482,7 +47481,6 @@ ballot
 balsam
 baltic
 balzac
-bamako
 bamboo
 banana
 banded
@@ -50162,7 +50160,6 @@ hubris
 huddle
 hudson
 huffed
-huffer
 hugely
 hugged
 hughes
