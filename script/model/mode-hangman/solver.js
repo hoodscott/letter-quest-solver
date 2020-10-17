@@ -13,7 +13,8 @@ const solveHangman = () => {
 
         for(let wordIndex = 0; wordIndex < word.length; wordIndex++) {
             if(!invalidLetters.includes(word[wordIndex])
-                && (guessLetters[wordIndex] === word[wordIndex] || guessLetters[wordIndex] === "")) {
+                    && (guessLetters[wordIndex] === word[wordIndex] || guessLetters[wordIndex] === "")
+                    && (guessLetters[wordIndex] !== "" || !guessLetters.includes(word[wordIndex]))) {
                 if((wordIndex + 1) === word.length) {
                     matchingWords.push(word);
                 }

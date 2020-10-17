@@ -2,7 +2,7 @@ const getGuessLetters = () => {
     const guess = [ ];
 
     $("#mode_hangman div[name='guess'] input").each(function() {
-        guess.push($(this).val());
+        guess.push($(this).val().toLowerCase());
     });
 
     return guess;
