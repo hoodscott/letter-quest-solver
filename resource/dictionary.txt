@@ -16123,8 +16123,6 @@ paragraphs
 paralleled
 paralysing
 paralyzing
-paramagnet
-paramaribo
 paramedics
 parameters
 parametric
@@ -16138,7 +16136,6 @@ parchments
 pardonable
 parenthood
 parliament
-parrotlike
 partiality
 participle
 particular
@@ -21008,9 +21005,7 @@ delirious
 delivered
 deliverer
 delousing
-deludable
 delusions
-demagnify
 demagogue
 demanding
 demarcate
@@ -32696,15 +32691,12 @@ martinet
 martinis
 martyred
 maryland
-maryport
 marzipan
 massacre
 massaged
 massages
 masseurs
 masseuse
-massless
-mastadon
 mastered
 masterly
 mastiffs
@@ -32997,7 +32989,6 @@ morality
 morasses
 morbidly
 moreover
-moriarty
 moribund
 mornings
 moroccan
@@ -46437,7 +46428,6 @@ uptight
 uptrend
 upturns
 upwards
-uraguay
 uranium
 urchins
 urethra
@@ -48864,7 +48854,6 @@ dryish
 dryrot
 dubbed
 dubbin
-dublin
 ducked
 ducker
 dudley
