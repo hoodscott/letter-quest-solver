@@ -1,3 +1,5 @@
+const isLetterUsable = ($letter) => getEffect($letter) !== AVOID;
+
 const calculateWeight = ($letter) => {
     const pointsWeight = getPointsWeight($letter);
     const effectWeight = getEffectWeight($letter);

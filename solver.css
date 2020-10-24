@@ -113,8 +113,8 @@ table[name='results'] button {
     color: cornflowerblue;
 }
 
-#mode_main button[name='damaged'] {
-    color: beige;
+#mode_main button[name='avoid'] {
+    color: grey;
 }
 
 #mode_main button[name='plagued'] {
@@ -153,8 +153,8 @@ table[name='results'] button {
     background-color: cornflowerblue;
 }
 
-#mode_main input[name='letter'][data-effect='damaged'] {
-    background-color: beige;
+#mode_main input[name='letter'][data-effect='avoid'] {
+    background-color: grey;
 }
 
 #mode_main input[name='letter'][data-effect='plagued'] {

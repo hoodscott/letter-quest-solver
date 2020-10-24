@@ -26,9 +26,9 @@ const initialiseMainModeView = () => {
         const $divStatus = $(`<div name="status"></div>`);
         const $buttonPoints = $(`<button name="points">1</button>`);
         const $buttonCrystal = $(`<button name="crystal" class="effect">Crystal</button>`);
-        const $buttonDamaged = $(`<button name="damaged" class="effect">Damaged</button>`);
         const $buttonPlagued = $(`<button name="plagued" class="effect">Plagued</button>`);
-        $divStatus.append($buttonPoints, $buttonCrystal, $buttonDamaged, $buttonPlagued);
+        const $buttonAvoid = $(`<button name="avoid" class="effect">Avoid</button>`);
+        $divStatus.append($buttonPoints, $buttonCrystal, $buttonPlagued, $buttonAvoid);
 
         $div.append($divLetter, $divStatus);
         $("#mode_main div[name='gameplay']").append($div);

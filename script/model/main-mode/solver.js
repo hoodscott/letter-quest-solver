@@ -13,8 +13,9 @@ const solveMain = (letters) => {
             let letterCompatible = false;
 
             for(let letterIndex = 0; letterIndex < letters.length; letterIndex++) {
-                if(word[wordIndex] === letters[letterIndex].letter
-                    && !match.matchIndexes.includes(letters[letterIndex].id)) {
+                if(letters[letterIndex].usable
+                        && word[wordIndex] === letters[letterIndex].letter
+                        && !match.matchIndexes.includes(letters[letterIndex].id)) {
                     letterCompatible = true;
                     match.weight += getLetterBaseWeight(letters[letterIndex]);
                     match.matchIndexes.push(letters[letterIndex].id);

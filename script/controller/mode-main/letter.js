@@ -30,7 +30,8 @@ const getLetterWeight = () => {
         letterWeight.push({
             id: index,
             letter: $letter.val().toLowerCase(),
-            weight: calculateWeight($letter)
+            weight: calculateWeight($letter),
+            usable: isLetterUsable($letter)
         });
     });
 

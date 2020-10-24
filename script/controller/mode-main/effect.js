@@ -1,6 +1,6 @@
 const CRYSTAL = "crystal";
 const PLAGUED = "plagued";
-const DAMAGED = "damaged";
+const AVOID = "avoid";
 
 const getEffect = ($letter) => {
   return $letter.attr("data-effect");

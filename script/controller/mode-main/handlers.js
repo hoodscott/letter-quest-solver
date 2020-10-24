@@ -15,8 +15,8 @@ $("#mode_main div[name='gameplay']").on("click", "button[name='plagued']", funct
     toggleEffect($(this), PLAGUED);
 });
 
-$("#mode_main div[name='gameplay']").on("click", "button[name='damaged']", function() {
-    toggleEffect($(this), DAMAGED);
+$("#mode_main div[name='gameplay']").on("click", "button[name='avoid']", function() {
+    toggleEffect($(this), AVOID);
 });
 
 $("#mode_main table[name='results']").on("mouseover", "td", function() {
