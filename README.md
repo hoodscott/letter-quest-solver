@@ -1,13 +1,13 @@
 # Letter Quest Solver
 
-This is a gameplay solution tool for the Xbox One game, _Letter Quest: Grimm's Journey Remastered_ (released in 2016).
-The tool does not in any way interact with your Xbox or the game, and is thus not a "hack" or "mod", but rather a
+This is a gameplay solution tool for the Xbox One puzzle game, _Letter Quest: Grimm's Journey Remastered_ (released in
+2016). The tool does not in any way interact with your Xbox or the game, and is thus not a "hack" or "mod", but rather a
 manual-input tool to assist with the game as and when you desire.
 
 The main reason for using the tool is for the efficient pursual of unlocking the game's achievements, for "achievement
 hunter" players.
 
-The tool is automatically hosted online for free usage using Github Pages:
+The tool is automatically hosted online for free using Github Pages:
 https://meszerus.github.io/letter-quest-solver/.
 
 ## Contributing
