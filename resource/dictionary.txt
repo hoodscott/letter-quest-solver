@@ -9088,7 +9088,6 @@ inopportune
 inquisition
 inquisitive
 inquisitors
-inquisitory
 inscription
 inscrutable
 inscrutably
@@ -9620,7 +9619,6 @@ nitrogenous
 nocturnally
 noiselessly
 noisemakers
-nomadically
 nominations
 nonchalance
 nondescript
@@ -12168,24 +12166,20 @@ bloodspots
 bloodstain
 bloodstock
 bloodstone
-bloodtests
 bloomfield
 blossoming
-blubberers
 blubbering
 bludgeoned
+bluebonnet
 bluebottle
 blueprints
-blumenthal
 blunderers
 blundering
 blushingly
 blustering
 boastfully
 boathouses
-boattrains
 bodyguards
-bodyweight
 boisterous
 bolshevism
 bolshevist
@@ -23823,7 +23817,6 @@ nobleness
 nocturnal
 nocturnes
 noiseless
-noisemake
 noisiness
 nominally
 nominated
@@ -37781,7 +37774,6 @@ boaters
 boating
 boatman
 boatmen
-bobbies
 bobbing
 bobbins
 bobbled
@@ -46659,7 +46651,6 @@ wrongly
 wrought
 wryness
 wyoming
-yankees
 yanking
 yapping
 yardarm
@@ -47368,7 +47359,6 @@ boards
 boasts
 boater
 bobbed
-bobbie
 bobbin
 bobble
 bobcat
@@ -53869,7 +53859,6 @@ yachts
 yahweh
 yamaha
 yanked
-yankee
 yapped
 yawing
 yawned
@@ -54033,7 +54022,6 @@ dam
 dan
 day
 dbe
-ddt
 deb
 dee
 den
@@ -54107,7 +54095,6 @@ fop
 for
 fox
 fro
-frs
 fry
 fun
 fur
@@ -54119,7 +54106,6 @@ gap
 gas
 gay
 gbe
-gcb
 gce
 gee
 gel
