@@ -40,11 +40,6 @@ const initialiseHangmanModeView = () => {
         const $inputLetter = $(`<input name="guessLetter" type="text" class="letter-base letter-small" maxlength="1" />`);
         $("#mode_hangman div[name='guess']").append($inputLetter);
     }
-
-    for(let i = 0; i < 26; i++) {
-        const $buttonLetter = $(`<button>${String.fromCharCode(65 + i)}</button>`);
-        $("#mode_hangman div[name='alphabet']").append($buttonLetter);
-    }
 };
 
 const loadDictionary = () => {
