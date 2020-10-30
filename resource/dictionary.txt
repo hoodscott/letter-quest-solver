@@ -5732,16 +5732,12 @@ rediscovered
 redistribute
 redundancies
 reevaluation
-reflectingly
 reflectional
 reflectively
 reformations
 reformatting
 reformulated
 reformulates
-refractorily
-refresheners
-refreshening
 refreshingly
 refreshments
 refrigerants
@@ -5749,11 +5745,9 @@ refrigerated
 refrigerates
 refrigerator
 refurbishing
-regardlessly
 regenerating
 regeneration
 registration
-regressively
 regularising
 regurgitated
 regurgitates
@@ -32503,9 +32497,6 @@ melanoma
 mellowed
 mellowly
 melodies
-melodist
-melville
-membered
 membrane
 memorial
 memories
@@ -32513,7 +32504,6 @@ memorise
 memorize
 menacing
 meniscus
-mensural
 mentally
 mentions
 mercator
@@ -41737,7 +41727,6 @@ languor
 lanolin
 lantern
 lanyard
-lanzhou
 laotian
 lapdogs
 lapfuls
@@ -48954,7 +48943,6 @@ fifths
 figaro
 fights
 figure
-fijian
 filets
 filial
 filing
@@ -54149,7 +54137,6 @@ hoc
 hod
 hoe
 hog
-hoi
 hop
 hot
 how
