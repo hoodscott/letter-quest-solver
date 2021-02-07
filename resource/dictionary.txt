@@ -11263,20 +11263,15 @@ unmentioned
 unmitigated
 unmonitored
 unmotivated
-unmummified
 unmusically
-unmutilated
 unnaturally
 unnavigable
-unnavigated
 unnecessary
 unobservant
 unobtrusive
-unoffending
 unorganised
 unpatriotic
 unperceived
-unperfected
 unperformed
 unpersuaded
 unperturbed
@@ -11286,14 +11281,11 @@ unpredicted
 unprintable
 unprocessed
 unpromising
-unpropelled
 unprotected
 unpublished
 unqualified
 unravelling
-unreadiness
 unrealistic
-unrecovered
 unregulated
 unrehearsed
 unrelenting
@@ -11305,7 +11297,6 @@ unrewarding
 unsatisfied
 unsaturated
 unscheduled
-unscholarly
 unscrambled
 unscrambles
 unscratched
@@ -11313,9 +11304,7 @@ unselfishly
 unshackling
 unsheathing
 unsmilingly
-unsoldering
 unsolicited
-unsparkling
 unspeakable
 unspeakably
 unspecified
@@ -11324,7 +11313,6 @@ unstrapping
 unsupported
 unsurpassed
 unsuspected
-unsustained
 unsweetened
 untarnished
 unteachable
@@ -30871,7 +30859,6 @@ guttural
 guzzlers
 guzzling
 gymkhana
-gymnasia
 gymnasts
 gyrating
 gyration
@@ -30978,7 +30965,6 @@ hauliers
 haunches
 haunting
 havering
-hawaiian
 hawthorn
 haymaker
 haystack
