@@ -2844,10 +2844,8 @@ stratospheric
 strengthening
 strenuousness
 streptococcus
-stringentness
 subcontracted
 subcontractor
-subjectivists
 subordinating
 subordination
 subscriptions
@@ -2858,9 +2856,7 @@ substantiates
 substantively
 substitutions
 substructures
-subterraneous
 suffocatingly
-summarisation
 summarization
 sumptuousness
 superabundant
@@ -2876,7 +2872,6 @@ superstitious
 supplementary
 supplementing
 supplications
-suppositional
 suppositories
 suppressively
 supranational
@@ -2885,7 +2880,6 @@ survivability
 swashbucklers
 swashbuckling
 symmetrically
-synchronisers
 synchronising
 synchronizers
 synchronizing
@@ -53378,7 +53372,6 @@ caw
 cbi
 cen
 cid
-cmg
 cob
 cod
 cog
@@ -53501,7 +53494,6 @@ get
 gig
 gin
 git
-gmt
 gnu
 gob
 god
