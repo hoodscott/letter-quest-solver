@@ -12657,7 +12657,6 @@ conciliate
 concluding
 conclusion
 conclusive
-concocters
 concocting
 concoction
 concordant
@@ -12668,7 +12667,6 @@ concubines
 concurrent
 concurring
 concussion
-condemnate
 condemning
 condensate
 condensers
@@ -12677,7 +12675,6 @@ condescend
 condiments
 conditions
 condolence
-conducible
 conducting
 conduction
 conductive
@@ -12693,9 +12690,7 @@ confidants
 confidence
 configured
 configures
-confinable
 confirming
-confirmors
 confiscate
 conflating
 conflation
@@ -12706,15 +12701,11 @@ conforming
 conformist
 conformity
 confounded
-confounder
 confronted
 confusable
-confusably
 confusedly
 confusions
-confutable
 congealing
-congeneric
 congenital
 congestion
 congestive
@@ -12742,7 +12733,6 @@ consecrate
 consensual
 consenting
 consequent
-conservers
 conserving
 considered
 consignees
@@ -12751,10 +12741,8 @@ consignors
 consistent
 consisting
 consolable
-consolably
 consonance
 consonants
-consorters
 consorting
 consortium
 conspiracy
@@ -12768,13 +12756,10 @@ constraint
 constricts
 constructs
 construing
-consuetude
 consulates
 consulship
 consultant
-consultary
 consulting
-consultors
 consumable
 consummate
 contacting
@@ -12800,7 +12785,6 @@ continuity
 continuous
 contorting
 contortion
-contortive
 contouring
 contraband
 contrabass
@@ -12832,12 +12816,10 @@ conversing
 conversion
 converters
 converting
-convexedly
 conveyable
 conveyance
 convicting
 conviction
-convictive
 convincing
 convoluted
 convulsing
@@ -12856,7 +12838,6 @@ copulation
 copulative
 copyrights
 copywriter
-coralberry
 cordiality
 corinthian
 coriolanus
@@ -12870,7 +12851,6 @@ cornucopia
 coronaries
 coronation
 corpulence
-corpulency
 corpuscles
 corralling
 correcting
@@ -12884,7 +12864,6 @@ corrigenda
 corrosives
 corrugated
 corrugates
-corrupters
 corrupting
 corruption
 cosmically
@@ -26448,7 +26427,6 @@ wittering
 witticism
 wittiness
 wittingly
-wodehouse
 woebegone
 wolfishly
 womanhood
@@ -27206,15 +27184,12 @@ bearable
 bearably
 bearding
 bearings
-bearsden
 bearskin
-beasties
 beatific
 beatings
 beatniks
 beatrice
 beaufort
-beaulieu
 beaumont
 beauties
 beautify
@@ -27231,7 +27206,6 @@ bedmaker
 bedposts
 bedrolls
 bedrooms
-bedsocks
 bedsores
 bedstead
 bedtimes
@@ -27298,9 +27272,7 @@ bespeaks
 bessemer
 bestowal
 bestowed
-betatron
 bethesda
-betjeman
 betrayal
 betrayed
 betrayer
@@ -31044,7 +31016,6 @@ jackdaws
 jacketed
 jackpots
 jacobean
-jacobite
 jalopies
 jamaican
 jamboree
@@ -31055,7 +31026,6 @@ japanned
 jaundice
 jauntily
 jaunting
-javanese
 javelins
 jealousy
 jennifer
@@ -51919,7 +51889,6 @@ tahiti
 tailed
 tailor
 taints
-taipei
 taiwan
 takers
 taking
@@ -53179,7 +53148,6 @@ jan
 jar
 jaw
 jay
-jed
 jet
 jew
 jib
