@@ -26,7 +26,6 @@ const addMainResults = (results) => {
             $("#mode_main table[name='results']").append($(
                     `<tr name="result" data-ids=",${results[i].matchIndexes},">
                         <td>${results[i].word}</td>
-                        <td>${results[i].weight}</td>
                         <td>
                             <button name="use">Use</button>
                         </td>
