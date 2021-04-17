@@ -1,5 +1,34 @@
 const LAST_LETTER_ID = 14;
 
+const DEFAULT_POINT_FOR_LETTER = {
+    "A": 1,
+    "B": 2,
+    "C": 2,
+    "D": 1,
+    "E": 1,
+    "F": 2,
+    "G": 1,
+    "H": 2,
+    "I": 1,
+    "J": 3,
+    "K": 3,
+    "L": 1,
+    "M": 2,
+    "N": 1,
+    "O": 1,
+    "P": 2,
+    "Q": 3,
+    "R": 1,
+    "S": 1,
+    "T": 1,
+    "U": 1,
+    "V": 2,
+    "W": 2,
+    "X": 3,
+    "Y": 2,
+    "Z": 3
+};
+
 // Recursive
 const focusNextEmptyLetter = ($currentLetter) => {
     const thisLetterId = Number.parseInt($currentLetter.parent().parent().attr("data-id"));
@@ -42,7 +71,6 @@ const resetLetter = ($letter) => {
     $letter.val("");
     resetEffect($letter);
     resetHighlight($letter);
-    resetPoint($letter);
 };
 
 const resetLetters = () => {

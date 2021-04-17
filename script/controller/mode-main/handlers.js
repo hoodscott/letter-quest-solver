@@ -1,10 +1,5 @@
 $("#mode_main div[name='gameplay']").on("keyup", "input[name='letter']", function() {
-    autoPoint($(this));
     focusNextEmptyLetter($(this));
-});
-
-$("#mode_main div[name='gameplay']").on("click", "button[name='points']", function() {
-    cyclePoint($(this));
 });
 
 $("#mode_main div[name='gameplay']").on("click", "button[name='crystal']", function() {

@@ -4,17 +4,11 @@ const calculateWeight = ($letter) => {
     const pointsWeight = getPointsWeight($letter);
     const effectWeight = getEffectWeight($letter);
     const achievementWeight = getLetterAchievementWeight($letter);
-    const totalWeight = pointsWeight + effectWeight + achievementWeight;
-    console.log(`Letter ${$letter.val()} has a total weight of ${totalWeight}.
-            This comes from:
-            ${pointsWeight} for points,
-            ${effectWeight} for effect,
-            ${achievementWeight} for achievement relevance`);
-    return totalWeight;
+    return pointsWeight + effectWeight + achievementWeight;
 };
 
 const getPointsWeight = ($letter) => {
-    return Number.parseInt($letter.parent().parent().find("button[name='points']").text());
+    return DEFAULT_POINT_FOR_LETTER[$letter.val()];
 };
 
 const getEffectWeight = ($letter) => {

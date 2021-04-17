@@ -105,10 +105,6 @@ table[name='results'] button {
     background-color: darkgray;
 }
 
-#mode_main button[name='points'] {
-    float: right;
-}
-
 #mode_main button[name='crystal'] {
     color: cornflowerblue;
 }
