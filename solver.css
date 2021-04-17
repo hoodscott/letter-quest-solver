@@ -114,7 +114,7 @@ table[name='results'] button {
 }
 
 #mode_main button[name='plagued'] {
-    color: limegreen;
+    color: red;
 }
 
 #mode_main .effect {
@@ -154,7 +154,7 @@ table[name='results'] button {
 }
 
 #mode_main input[name='letter'][data-effect='plagued'] {
-    background-color: limegreen;
+    background-color: red;
 }
 
 #mode_hangman div[name='alphabet'] button {
