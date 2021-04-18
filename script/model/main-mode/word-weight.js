@@ -2,31 +2,33 @@ const getWordBaseWeight = (word) => {
     return word.length;
 };
 
-const getWordAchievementWeight = (word) => {
-    return getAManAPlanWordWeight(word)
-        + getFeelingReallyGoodWordWeight(word)
-        + getHonoraryBaconBanditWordWeight(word)
-        + getItsBaconWordWeight(word)
-        + getOctoberfestWordWeight(word)
-        + getRowYourBoatWordWeight(word)
-        + getSeeYouInSeptemberWordWeight(word)
-        + getSixPackWordWeight(word)
-        + getWhyWordWeight(word)
-        + getYayEverydayRoyaltyWordWeight(word)
-        + getCrystalConquerorWordWeight(word);
+const getWordAchievementWeight = (match) => {
+    return getAManAPlanWordWeight(match)
+        + getFeelingReallyGoodWordWeight(match)
+        + getHonoraryBaconBanditWordWeight(match)
+        + getItsBaconWordWeight(match)
+        + getOctoberfestWordWeight(match)
+        + getRowYourBoatWordWeight(match)
+        + getSeeYouInSeptemberWordWeight(match)
+        + getSixPackWordWeight(match)
+        + getWhyWordWeight(match)
+        + getYayEverydayRoyaltyWordWeight(match)
+        + getCrystalConquerorWordWeight(match);
 }
 
-const getAManAPlanWordWeight = (word) => {
+const getWordPriorityWeight = (match, priority) => isPrioritisedWord(match, priority) ? 100 : 0;
+
+const getAManAPlanWordWeight = (match) => {
     return getAchievementWeight(achievements.aManAPlan,
-        word.word === word.word.split('').reverse().join(''),
+        match.word === match.word.split('').reverse().join(''),
         MODIFIER_ACHIEVEMENT_RARE);
 };
 
-const getFeelingReallyGoodWordWeight = (word) => {
+const getFeelingReallyGoodWordWeight = (match) => {
     let hasDoubleLetters;
 
-    for(let i = 1; i < word.word.length; i++) {
-        if(word.word[i] === word.word[i - 1]) {
+    for(let i = 1; i < match.word.length; i++) {
+        if(match.word[i] === match.word[i - 1]) {
             hasDoubleLetters = true;
             break;
         }
@@ -37,61 +39,61 @@ const getFeelingReallyGoodWordWeight = (word) => {
         MODIFIER_ACHIEVEMENT_UNCOMMON);
 };
 
-const getHonoraryBaconBanditWordWeight = (word) => {
+const getHonoraryBaconBanditWordWeight = (match) => {
     return getAchievementWeight(achievements.honoraryBaconBandit,
-        word.word === "bandits",
+        match.word === "bandits",
         MODIFIER_ACHIEVEMENT_RARE_SPECIFIC)
 };
 
-const getItsBaconWordWeight = (word) => {
+const getItsBaconWordWeight = (match) => {
     return getAchievementWeight(achievements.itsBacon,
-        word.word === "bacon",
+        match.word === "bacon",
         MODIFIER_ACHIEVEMENT_RARE_SPECIFIC);
 };
 
-const getOctoberfestWordWeight = (word) => {
+const getOctoberfestWordWeight = (match) => {
     return getAchievementWeight(achievements.octoberfest,
-        word.word.length === 8,
+        match.word.length === 8,
         MODIFIER_ACHIEVEMENT_COMMON);
 };
 
-const getRowYourBoatWordWeight = (word) => {
+const getRowYourBoatWordWeight = (match) => {
     return getAchievementWeight(achievements.rowYourBoat,
-        word.matchIndexes.filter(letterId => [0, 1, 2, 3, 4].includes(letterId)).length === 5
-            || word.matchIndexes.filter(letterId => [5, 6, 7, 8, 9].includes(letterId)).length === 5
-            || word.matchIndexes.filter(letterId => [10, 11, 12, 13, 14].includes(letterId)).length === 5,
+        match.matchIndexes.filter(letterId => [0, 1, 2, 3, 4].includes(letterId)).length === 5
+            || match.matchIndexes.filter(letterId => [5, 6, 7, 8, 9].includes(letterId)).length === 5
+            || match.matchIndexes.filter(letterId => [10, 11, 12, 13, 14].includes(letterId)).length === 5,
         MODIFIER_ACHIEVEMENT_COMMON);
 };
 
-const getSeeYouInSeptemberWordWeight = (word) => {
+const getSeeYouInSeptemberWordWeight = (match) => {
     return getAchievementWeight(achievements.seeYouInSeptember,
-        word.word.length === 7,
+        match.word.length === 7,
         MODIFIER_ACHIEVEMENT_COMMON);
 };
 
-const getSixPackWordWeight = (word) => {
+const getSixPackWordWeight = (match) => {
     return getAchievementWeight(achievements.sixPack,
-        word.word.length === 6,
+        match.word.length === 6,
         MODIFIER_ACHIEVEMENT_COMMON);
 };
 
-const getWhyWordWeight = (word) => {
+const getWhyWordWeight = (match) => {
     return getAchievementWeight(achievements.why,
-        word.word.split('').filter(letter => ["a", "e", "i", "o", "u"].includes(letter)).length === 0,
+        match.word.split('').filter(letter => ["a", "e", "i", "o", "u"].includes(letter)).length === 0,
         MODIFIER_ACHIEVEMENT_RARE);
 };
 
-const getYayEverydayRoyaltyWordWeight = (word) => {
+const getYayEverydayRoyaltyWordWeight = (match) => {
     return getAchievementWeight(achievements.yayEverydayRoyalty,
-        word.word.split('').filter(letter => ["y"].includes(letter)).length === 2,
+        match.word.split('').filter(letter => ["y"].includes(letter)).length === 2,
         MODIFIER_ACHIEVEMENT_RARE_SPECIFIC);
 };
 
-const getCrystalConquerorWordWeight = (word) => {
+const getCrystalConquerorWordWeight = (match) => {
     let crystalsUsed = 0;
 
-    for(let i = 0; i < word.matchIndexes.length; i++) {
-        crystalsUsed += getEffect($($("input[name='letter']")[word.matchIndexes[i]])) === CRYSTAL;
+    for(let i = 0; i < match.matchIndexes.length; i++) {
+        crystalsUsed += getEffect($($("input[name='letter']")[match.matchIndexes[i]])) === CRYSTAL;
     }
 
     return getAchievementWeight(achievements.crystalConqueror,

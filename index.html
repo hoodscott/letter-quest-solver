@@ -37,6 +37,15 @@
                     <!-- Populated at runtime -->
                 </table>
             </div>
+            <div name="conditions">
+                <label for="priority">Choose a condition to prioritise:</label>
+                <select id="priority" name="priority">
+                    <option selected value="none"></option>
+                    <option value="fiveLetterWords">Five letter words</option>
+                    <option value="sixLetterWords">Six letter words</option>
+                    <option value="sevenLetterWords">Seven letter words</option>
+                </select>
+            </div>
             <div name="actions">
                 <button name="reset">Reset</button>
                 <button name="solve">Solve!</button>
@@ -188,11 +197,13 @@
         <script src="script/controller/mode-main/effect.js"></script>
         <script src="script/controller/mode-main/handlers.js"></script>
         <script src="script/controller/mode-main/letter.js"></script>
+        <script src="script/controller/mode-main/priority.js"></script>
         <script src="script/controller/mode-main/result.js"></script>
         <script src="script/model/mode-hangman/solver.js"></script>
         <script src="script/model/main-mode/solver.js"></script>
         <script src="script/model/main-mode/weight-util.js"></script>
         <script src="script/model/main-mode/letter-weight.js"></script>
         <script src="script/model/main-mode/word-weight.js"></script>
+        <script src="script/model/main-mode/priority.js"></script>
     </body>
 </html>

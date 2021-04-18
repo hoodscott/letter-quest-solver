@@ -7,17 +7,11 @@ const calculateWeight = ($letter) => {
     return pointsWeight + effectWeight + achievementWeight;
 };
 
-const getPointsWeight = ($letter) => {
-    return DEFAULT_POINT_FOR_LETTER[$letter.val()];
-};
+const getPointsWeight = ($letter) => DEFAULT_POINT_FOR_LETTER[$letter.val().toUpperCase()];
 
-const getEffectWeight = ($letter) => {
-    return getEffect($letter) ? MODIFIER_STANDARD : MODIFIER_NONE;
-};
+const getEffectWeight = ($letter) => getEffect($letter) ? MODIFIER_STANDARD : MODIFIER_NONE;
 
-const getLetterBaseWeight = (letter) => {
-    return letter.weight;
-};
+const getLetterBaseWeight = (letter) => letter.weight;
 
 const getLetterAchievementWeight = ($letter) => {
     return getAllPlaguedOutLetterWeight($letter)

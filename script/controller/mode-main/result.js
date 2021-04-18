@@ -2,7 +2,7 @@ const getMainResults = () => {
     resetMainResults();
     setInfo("Solving. Please wait.");
 
-    const results = solveMain(getLetterWeight());
+    const results = solveMain(getLetterWeight(), getPrioritySetting());
 
     if(results.length > 0) {
         $("#mode_main table[name='results'] tr[name='heading']").show();

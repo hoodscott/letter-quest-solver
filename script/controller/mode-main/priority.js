@@ -1,0 +1,1 @@
+const getPrioritySetting = () => $("#priority").val();

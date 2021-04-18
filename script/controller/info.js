@@ -3,6 +3,5 @@ const setInfo = (message) => {
 };
 
 const resetInfo = () => {
-    console.clear();
     $("#info").empty();
 };
