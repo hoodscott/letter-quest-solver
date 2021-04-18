@@ -48,7 +48,7 @@ const getPreventionLetterWeight = ($letter) => {
 
 const getTopShelfLetterWeight = ($letter) => {
     return getAchievementWeight(achievements.topShelf,
-        ["0", "1", "2", "3", "4"].includes($letter.parent().parent().attr("data-id")),
+        [0, 1, 2, 3, 4].includes($letter.parent().parent().attr("data-id")),
         MODIFIER_ACHIEVEMENT_COMMON);
 };
 
