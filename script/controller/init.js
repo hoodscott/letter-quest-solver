@@ -32,6 +32,10 @@ const initialiseMainModeView = () => {
         $div.append($divLetter, $divStatus);
         $("#mode_main div[name='gameplay']").append($div);
     }
+
+    Object.keys(priorities).filter((key) => key !== "none").forEach((key) => {
+        $(`#priority`).append(`<option value="${key}">${key.replaceAll("_", " ")}</option>`);
+    })
 };
 
 const initialiseHangmanModeView = () => {
