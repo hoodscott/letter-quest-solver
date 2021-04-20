@@ -13895,19 +13895,14 @@ husbandman
 husbandmen
 hutchinson
 hybridised
-hybridiser
 hydrangeas
 hydraulics
 hydrofoils
-hydrolysed
-hydrolyses
 hydrolysis
 hydrolyzed
 hydrometer
-hydropathy
 hydroponic
 hygrometer
-hyperbolae
 hyperboles
 hyperbolic
 hypersonic
@@ -21468,9 +21463,7 @@ hydrating
 hydration
 hydraulic
 hydrofoil
-hydrogens
 hydrology
-hydrolyse
 hydroxide
 hyperbola
 hyperbole
@@ -26510,7 +26503,6 @@ bannocks
 banquets
 banshees
 bantered
-banterer
 baptised
 baptises
 baptisms
