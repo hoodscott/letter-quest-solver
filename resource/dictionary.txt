@@ -21498,17 +21498,14 @@ illumined
 illumines
 illusions
 imaginary
-imaginate
 imagining
 imbalance
 imbeciles
-imbedding
 imbroglio
 imitating
 imitation
 imitative
 imitators
-immaturer
 immediacy
 immediate
 immensely
@@ -21531,7 +21528,6 @@ impacting
 impairing
 impartial
 imparting
-impassion
 impassive
 impatient
 impeached
@@ -21546,7 +21542,6 @@ impinging
 impiously
 implanted
 implement
-implicant
 implicate
 imploding
 imploring
@@ -21580,7 +21575,6 @@ inanimate
 inaudible
 inaudibly
 inaugural
-incanting
 incapable
 incapably
 incarnate
@@ -21652,7 +21646,6 @@ inferring
 infertile
 infesting
 infielder
-infinitum
 infirmary
 infirmity
 inflaming
@@ -21669,7 +21662,6 @@ informing
 infringed
 infringes
 infuriate
-infusible
 infusions
 ingenious
 ingenuity
@@ -21919,12 +21911,9 @@ knapsacks
 knavishly
 knighting
 knockouts
-knotgrass
 knowingly
 knowledge
 knuckling
-kuybyshev
-labellers
 labelling
 laborious
 labourers
@@ -21966,7 +21955,6 @@ lastingly
 latchkeys
 laterally
 lathering
-latinised
 latitudes
 laudatory
 laughable
@@ -21976,7 +21964,6 @@ launching
 laundered
 laundries
 lavishing
-lawgiving
 lawmakers
 lawmaking
 laxatives
@@ -22015,7 +22002,6 @@ leukaemia
 levellers
 levelling
 leviathan
-leviathon
 levitated
 levitates
 leviticus
@@ -22046,9 +22032,7 @@ ligatures
 lightened
 lightness
 lightning
-liltingly
 limbering
-limehouse
 limelight
 limericks
 limestone
@@ -22064,7 +22048,6 @@ lionising
 lionizing
 lipsticks
 liquefied
-liquefier
 liquefies
 liquidate
 liquidise
@@ -22092,12 +22075,10 @@ livestock
 loathsome
 localised
 localises
-localisms
 localized
 localizes
 locations
 locksmith
-locomotor
 lodestone
 loftiness
 logarithm
@@ -22114,21 +22095,17 @@ longevity
 longhorns
 longitude
 loopholes
-looseleaf
 looseness
 loosening
 loquacity
-lordlings
 lordships
 lorgnette
 lotteries
 louisiana
-lousewort
 lousiness
 lovebirds
 loveliest
 lowercase
-lowestoft
 lowliness
 loyalists
 loyalties
