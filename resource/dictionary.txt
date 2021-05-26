@@ -30574,8 +30574,6 @@ lionized
 lionizes
 lipstick
 liqueurs
-liquidly
-liskeard
 listable
 listened
 listener
@@ -30599,9 +30597,6 @@ livelong
 livening
 liveried
 liveries
-llanaber
-llanelli
-llanrwst
 loadings
 loanable
 loathing
@@ -30633,13 +30628,9 @@ longford
 longhand
 longhorn
 longings
-longleat
-lonsdale
 loophole
 loosened
 lopsided
-lordless
-lordling
 lordship
 lorraine
 loudened
@@ -30672,8 +30663,6 @@ luminous
 lunatics
 luncheon
 lunching
-lungwort
-lurchers
 lurching
 luscious
 lustrous
@@ -30926,8 +30915,6 @@ militate
 milkmaid
 milksops
 milkweed
-milkwort
-milliamp
 millibar
 milliner
 millions
@@ -31323,8 +31310,6 @@ occasion
 occident
 occluded
 occludes
-occulted
-occultly
 occupant
 occupied
 occupier
@@ -31333,8 +31318,6 @@ occurred
 ockenden
 octagons
 octobers
-octupled
-octuples
 oculists
 oddballs
 oddities
@@ -31433,8 +31416,6 @@ osculant
 osculate
 ossified
 ossifies
-otiosely
-otterton
 ottomans
 outboard
 outbound
@@ -31472,8 +31453,6 @@ outlives
 outlooks
 outlying
 outmoded
-outmoved
-outmoves
 outpaced
 outpaces
 outpoint
@@ -31941,8 +31920,6 @@ polyglot
 polygons
 polymers
 pondered
-pondweed
-pontific
 pontoons
 poorness
 poppadum
@@ -32213,8 +32190,6 @@ pustules
 putative
 puzzlers
 puzzling
-pwllheli
-pyelitis
 pyramids
 pyrenean
 pyridine
@@ -32433,8 +32408,6 @@ redirect
 redouble
 redoubts
 redrafts
-redshank
-redstone
 reducing
 redwoods
 reelects
@@ -32636,8 +32609,6 @@ restroom
 resubmit
 resulted
 resuming
-resurged
-resurges
 retailed
 retailer
 retained
@@ -32757,15 +32728,10 @@ robinson
 robotics
 robotism
 robustly
-rochdale
-rochford
-rockabye
 rocketed
 rocketry
 rockford
 rockiest
-rockland
-rocklike
 roderick
 roentgen
 rollback
@@ -32807,8 +32773,6 @@ roundoff
 roundups
 rousseau
 routines
-routings
-rovingly
 royalist
 rubbishy
 rubidium
@@ -32865,9 +32829,6 @@ salinity
 salivary
 salivate
 sallying
-saltburn
-saltbush
-saltwort
 salutary
 saluting
 salvable
@@ -33068,8 +33029,6 @@ seedling
 seething
 segments
 seizures
-selborne
-seldomly
 selected
 selector
 selenium
@@ -33144,8 +33103,6 @@ shamrock
 shanghai
 shanklin
 shanties
-shapable
-shapably
 sharable
 sharpens
 sharpest
@@ -33306,8 +33263,6 @@ skidding
 skimming
 skimpily
 skimping
-skindive
-skinfuls
 skinhead
 skinless
 skinning
@@ -33407,8 +33362,6 @@ smuggled
 smuggler
 smuggles
 smugness
-smuttily
-snaefell
 snagging
 snapback
 snappily
@@ -33509,13 +33462,9 @@ sorriest
 soulless
 sounding
 sourness
-southall
-southend
 southern
 southpaw
 souvenir
-soyabean
-spacebar
 spaceman
 spacemen
 spacings
@@ -34073,8 +34022,6 @@ taxpayer
 teacakes
 teachers
 teaching
-teahouse
-teakwood
 teammate
 teamster
 teamwise
@@ -35493,8 +35440,6 @@ archive
 archway
 arcsine
 arduous
-areaway
-areolar
 arguing
 ariadne
 aridity
@@ -35629,13 +35574,9 @@ avenues
 average
 averred
 averted
-aviated
-aviates
 aviator
 avidity
 avocado
-avocate
-avocets
 avoided
 avowing
 awaited
@@ -35951,8 +35892,6 @@ bipolar
 birches
 birdied
 birdies
-birdman
-birdmen
 birthed
 biryani
 biscuit
@@ -36129,8 +36068,6 @@ bounden
 bounder
 bouquet
 bourbon
-boursin
-bourton
 bovines
 bowlder
 bowlers
@@ -36321,8 +36258,6 @@ burbots
 burdens
 burdock
 bureaus
-bureaux
-burford
 burgeon
 burgers
 burglar
@@ -37312,8 +37247,6 @@ cutouts
 cutters
 cutting
 cutworm
-cwmbran
-cyanate
 cyanide
 cycling
 cyclist
@@ -37890,8 +37823,6 @@ duopoly
 durable
 durably
 durance
-durrell
-duskily
 dustbin
 dusters
 dusting
@@ -38176,8 +38107,6 @@ etching
 eternal
 ethanol
 ethical
-ettrick
-etymons
 eugenic
 eulogic
 eunuchs
@@ -38685,8 +38614,6 @@ frisked
 fritter
 frizzle
 frizzly
-frocked
-frogged
 frogman
 frogmen
 frolics
@@ -39013,8 +38940,6 @@ gremlin
 grenada
 grenade
 greying
-greyish
-greylag
 griddle
 grieved
 grieves

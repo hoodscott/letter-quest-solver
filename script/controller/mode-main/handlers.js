@@ -39,3 +39,7 @@ $("#mode_main button[name='reset']").click(function() {
     resetDemandForNewLetters();
     resetMainResults();
 });
+
+$("#priority").change(function() {
+    doesChosenPriorityNeedSpecifiedLetter() ? showSpecificLetterInput() : hideSpecificLetterInput();
+});

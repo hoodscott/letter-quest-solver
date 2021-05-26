@@ -1,4 +1,4 @@
-const solveMain = (letters, priority) => {
+const solveMain = (letters, priority, prioritySpecificLetter) => {
     const matchingWords = [ ];
 
     dictionary.forEach(word => {
@@ -31,7 +31,7 @@ const solveMain = (letters, priority) => {
 
         if(wordCompatible) {
             match.weight += getWordAchievementWeight(match);
-            match.weight += getWordPriorityWeight(match, priority);
+            match.weight += getWordPriorityWeight(match, priority, prioritySpecificLetter);
             matchingWords.push(match);
         }
     });

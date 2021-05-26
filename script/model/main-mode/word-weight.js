@@ -16,7 +16,7 @@ const getWordAchievementWeight = (match) => {
         + getCrystalConquerorWordWeight(match);
 }
 
-const getWordPriorityWeight = (match, priority) => isPrioritisedWord(match, priority) ? 100 : 0;
+const getWordPriorityWeight = (match, priority, prioritySpecificLetter) => isPrioritisedWord(match, priority, prioritySpecificLetter) ? 100 : 0;
 
 const getAManAPlanWordWeight = (match) => {
     return getAchievementWeight(achievements.aManAPlan,

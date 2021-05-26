@@ -182,6 +182,10 @@ table[name='results'] button {
     font-style: italic;
 }
 
+#priority_specifiedLetter {
+    display: none;
+}
+
 div[name='actions'] {
     margin-top: 0.5%;
     max-width: 53%;
