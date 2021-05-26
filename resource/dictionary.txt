@@ -11635,7 +11635,6 @@ calculable
 calculated
 calculates
 calculator
-caledonian
 calendered
 calibrated
 calibrates
@@ -11643,7 +11642,6 @@ calibrator
 california
 calumnious
 calvinists
-camberwell
 camouflage
 campaigned
 campaigner
@@ -19851,8 +19849,6 @@ digestion
 digestive
 digitalis
 digitally
-digitised
-digitises
 digitized
 digitizes
 dignified
@@ -28268,15 +28264,11 @@ diffuser
 diffuses
 digested
 digester
-diggable
 diggings
-digitate
-digitise
 digitize
 dihedral
 dilating
 dilation
-dilative
 dilators
 dilatory
 dilemmas
@@ -28286,7 +28278,6 @@ dilution
 diminish
 dinghies
 dingiest
-dingwall
 dinosaur
 diocesan
 diplomas
@@ -29884,7 +29875,6 @@ hilarity
 hillocks
 hillside
 hilltops
-himalaya
 hindered
 hindmost
 hinduism
@@ -29943,7 +29933,6 @@ hormonal
 hormones
 hornbeam
 horology
-horowitz
 horrible
 horribly
 horridly
