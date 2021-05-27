@@ -1,8 +1,8 @@
 # Letter Quest Solver
 
 This is a gameplay solution tool for the Xbox One puzzle game, _Letter Quest: Grimm's Journey Remastered_ (released in
-2016). The tool does not in any way interact with your Xbox or the game, and is thus not a "hack" or "mod", but rather a
-manual-input tool to assist with the game as and when you desire.
+2016). The tool does **not** in any way interact with your Xbox, the game, or any Xbox-related services, and is thus not a "hack" or "mod", but rather a
+manual-input tool to assist with the game as you have it up on another screen.
 
 The main reason for using the tool is for the efficient pursual of unlocking the game's achievements, for "achievement
 hunter" players.
