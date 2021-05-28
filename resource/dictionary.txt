@@ -26502,7 +26502,6 @@ believer
 believes
 belittle
 bellboys
-bellevue
 bellhops
 bellowed
 bellyful
@@ -26923,8 +26922,6 @@ calendar
 calender
 calfskin
 calipers
-callboys
-callgirl
 calmness
 calories
 calvados
@@ -27187,8 +27184,6 @@ chillier
 chilling
 chimeric
 chimneys
-chinaman
-chinamen
 chinking
 chinless
 chinning
@@ -27301,8 +27296,6 @@ clenched
 clenches
 clerical
 clerking
-clerkish
-clevedon
 cleverly
 clicking
 clifford
@@ -27531,8 +27524,6 @@ confutes
 congeals
 congress
 conifers
-coniform
-coniston
 conjoins
 conjoint
 conjugal
@@ -27602,8 +27593,6 @@ cookbook
 coolants
 coolidge
 coolness
-coopting
-cooption
 copeland
 cophetua
 coplanar
@@ -27820,14 +27809,10 @@ crutches
 cryostat
 crystals
 cubicles
-cubiform
-cuboidal
 cuckolds
 cucumber
 cuddlier
 cuddling
-cufflink
-cuillins
 culinary
 culloden
 culpable
@@ -28772,8 +28757,6 @@ erasures
 erecting
 erection
 erodible
-erosible
-errantry
 erupting
 eruption
 escalate
@@ -28831,8 +28814,6 @@ eviction
 evidence
 evildoer
 evincing
-evocable
-evocated
 evolving
 exacting
 exaction
@@ -45398,7 +45379,6 @@ births
 bisect
 bishop
 bisque
-bissau
 bistro
 bitchy
 biters
