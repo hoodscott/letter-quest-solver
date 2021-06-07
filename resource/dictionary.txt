@@ -5306,8 +5306,6 @@ redecoration
 redefinition
 redeployment
 redeposition
-redevelopers
-redimensions
 rediscovered
 redistribute
 redundancies
@@ -5838,9 +5836,6 @@ unaccidental
 unaccustomed
 unachievable
 unacquainted
-unacquirable
-unadjustable
-unadulterous
 unadvertised
 unaffectedly
 unaffiliated
@@ -6784,8 +6779,6 @@ classifiers
 classifying
 cleanliness
 clearheaded
-cleethorpes
-clementines
 cliffhanger
 climactical
 climatology
@@ -17538,7 +17531,6 @@ weaponless
 weaselling
 weathering
 weatherman
-wednesdays
 weightiest
 weightless
 wellington
@@ -27605,13 +27597,10 @@ coracles
 cordelia
 cordials
 corduroy
-coreless
 cornered
 corniest
 cornmeal
-cornwall
 coronary
-coronate
 coroners
 coronets
 corporal
@@ -27622,10 +27611,8 @@ corridor
 corroded
 corrodes
 corrupts
-corsetry
 cortical
 cortland
-cosecant
 cosmetic
 cosmical
 cossacks
@@ -29081,7 +29068,6 @@ flagship
 flailing
 flamenco
 flamingo
-flanagan
 flanders
 flanking
 flannels
@@ -34939,7 +34925,6 @@ wittiest
 wizardry
 wobbling
 woefully
-wolfgang
 womanise
 womanish
 wondered
@@ -36059,8 +36044,6 @@ breeder
 breezed
 breezes
 brendan
-brennan
-brenner
 brevity
 brewers
 brewery
@@ -36069,7 +36052,6 @@ bribers
 bribery
 bribing
 bricked
-bricker
 bridged
 bridges
 bridget
@@ -40737,12 +40719,10 @@ neuters
 neutral
 neutron
 neville
-newbold
 newborn
 newbury
 newness
 newport
-newquay
 newsboy
 newsman
 newsmen
@@ -40763,7 +40743,6 @@ nimbler
 nineveh
 niobium
 nippers
-nippily
 nipping
 nipples
 nirvana
@@ -46357,8 +46336,6 @@ deaden
 deadly
 deafen
 deafer
-deafly
-dealed
 dealer
 dearer
 dearie
