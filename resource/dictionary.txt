@@ -42576,8 +42576,6 @@ sedates
 seduced
 seducer
 seduces
-seeable
-seeably
 seedbed
 seeding
 seekers
@@ -43009,8 +43007,6 @@ somehow
 someone
 someway
 sonatas
-songbag
-songful
 sonnets
 soonest
 soothed
@@ -43037,8 +43033,6 @@ sources
 souring
 sourish
 soviets
-sowbane
-sowerby
 spacers
 spacial
 spacing
@@ -43574,8 +43568,6 @@ taverns
 taxable
 taxicab
 taxiing
-taxying
-tayside
 tbilisi
 teacake
 teacart
@@ -44288,7 +44280,6 @@ varying
 vassals
 vastest
 vatican
-vaughan
 vaulted
 vaulter
 vaunted
@@ -46059,7 +46050,6 @@ consul
 convex
 convey
 convoy
-conway
 cooing
 cooked
 cooker
@@ -46068,15 +46058,12 @@ cooled
 cooler
 coolie
 coolly
-coombs
 cooped
 cooper
-coopts
 copied
 copier
 copies
 coping
-copout
 copped
 copper
 copses
