@@ -1,7 +1,7 @@
 const getGuessLetters = () => {
     const guess = [ ];
 
-    $("#hangman-mode-container div[name='guess'] input").each(function() {
+    $("#hangman-mode-container section[name='problem'] input[name='letter-input']").each(function() {
         guess.push($(this).val().toLowerCase());
     });
 
@@ -38,15 +38,15 @@ const removeGuessLetter = () => {
 };
 
 const resetGuess = () => {
-    $("#hangman-mode-container div[name='guess'] input").each(function() {
+    $("#hangman-mode-container section[name='guesses'] input").each(function() {
         $(this).val("");
     });
 
-    $("#hangman-mode-container div[name='guess']").empty();
+    $("#hangman-mode-container section[name='guesses']").empty();
 
     for(let i = 0; i < 10; i++) {
-        const $inputLetter = $(`<input name="guessLetter" type="text" class="letter-base letter-small" maxlength="1" />`);
-        $("#hangman-mode-container div[name='guess']").append($inputLetter);
+        const $inputLetter = $(`<input name="letter-input" type="text" class="letter-input" maxlength="1" />`);
+        $("#hangman-mode-container section[name='guesses']").append($inputLetter);
     }
 
     $("#hangman-mode-container span[name='currentLength']").text(10);

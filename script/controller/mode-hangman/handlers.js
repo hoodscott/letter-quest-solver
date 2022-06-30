@@ -1,8 +1,8 @@
-$("#hangman-mode-container div[name='alphabet']").on("click", "button", function() {
+$("#hangman-mode-container section[name='alphabet']").on("click", "button", function() {
     disableLetter($(this));
 });
 
-$("#hangman-mode-container div[name='guess']").on("blur", "input[name='guessLetter']", function() {
+$("#hangman-mode-container section[name='guesses']").on("blur", "input[name='letter-input']", function() {
     enableLetter($(this));
 });
 
@@ -14,19 +14,19 @@ $("#hangman-mode-container button[name='plus']").click(function() {
     addGuessLetter();
 });
 
-$("#hangman-mode-container table[name='results']").on("mouseover", "td", function() {
+$("#hangman-mode-container table[name='solutions-table']").on("mouseover", "td", function() {
     addResultGuide($(this));
 });
 
-$("#hangman-mode-container table[name='results']").on("mouseout", "td", function() {
+$("#hangman-mode-container table[name='solutions-table']").on("mouseout", "td", function() {
     removeResultGuide();
 });
 
-$("#hangman-mode-container button[name='solve']").click(function() {
+$("#hangman-mode-container button[name='solve-action']").click(function() {
     getHangmanResults();
 });
 
-$("#hangman-mode-container button[name='reset']").click(function() {
+$("#hangman-mode-container button[name='reset-action']").click(function() {
     resetGuess();
     resetHangmanResults();
     resetHangmanLetters();

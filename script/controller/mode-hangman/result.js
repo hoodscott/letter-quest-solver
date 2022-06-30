@@ -2,9 +2,10 @@ const getHangmanResults = () => {
     resetHangmanResults();
 
     const results = solveHangman();
+    console.log(results);
 
     if(results.length > 0) {
-        $("#mode_hangman table[name='results'] tr[name='heading']").show();
+        $("#hangman-mode-container table[name='solutions-table']").show();
         addHangmanResults(results);
     }
 };
@@ -12,25 +13,25 @@ const getHangmanResults = () => {
 const addHangmanResults = (results) => {
     for(let i = 0; i < 5; i++) {
         if(results[i]) {
-            $("#mode_hangman table[name='results']").append($(
+            $("#hangman-mode-container table[name='solutions-table']").append($(
                     `<tr name="result">
                         <td>${results[i]}</td>
                     </tr>`));
         }
     }
 
-    $("#mode_hangman table[name='results']").removeClass("invisible");
+    $("#hangman-mode-container table[name='solutions-table']").removeClass("invisible");
 };
 
 const resetHangmanResults = () => {
-    $("#mode_hangman table[name='results']").addClass("invisible");
-    $("#mode_hangman tr[name='result']").remove();
+    $("#hangman-mode-container table[name='solutions-table']").addClass("invisible");
+    $("#hangman-mode-container tr[name='result']").remove();
 };
 
 const addResultGuide = ($this) => {
     const result = $this.text().trim();
 
-    $("#mode_hangman input[name='guessLetter']").each(function(i) {
+    $("#hangman-mode-container input[name='letter-input']").each(function(i) {
         if($(this).val().trim() === "") {
             $(this).val(result.charAt(i));
             $(this).addClass("guide");
@@ -39,7 +40,7 @@ const addResultGuide = ($this) => {
 };
 
 const removeResultGuide = () => {
-    $("#mode_hangman input[name='guessLetter']").each(function() {
+    $("#hangman-mode-container input[name='letter-input']").each(function() {
         if($(this).hasClass("guide")) {
             $(this).val("");
             $(this).removeClass("guide");

@@ -6520,7 +6520,6 @@ blunderings
 bodybuilder
 boilermaker
 bombardment
-bonaventure
 bookkeeping
 booksellers
 bookshelves
@@ -11683,7 +11682,6 @@ cathedrals
 catnapping
 causticity
 cauterised
-cauterises
 cauterized
 cauterizes
 cautionary
@@ -17783,7 +17781,6 @@ alchemist
 alcoholic
 alertness
 alexander
-alexandra
 algebraic
 algerians
 algorithm
@@ -26368,7 +26365,6 @@ battling
 baulkers
 baulking
 bavarian
-bavarois
 bawdiest
 bayonets
 bayreuth
@@ -27804,7 +27800,6 @@ dairying
 dairylea
 dairyman
 dairymen
-dalkeith
 dallying
 damaging
 damascus
@@ -47071,7 +47066,6 @@ fussed
 fusses
 futile
 future
-fuzhow
 fuzzed
 gabble
 gabled
