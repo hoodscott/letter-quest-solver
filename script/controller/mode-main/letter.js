@@ -30,31 +30,31 @@ const DEFAULT_POINT_FOR_LETTER = {
 };
 
 // Recursive
-const focusNextEmptyLetter = ($currentLetter) => {
-    const thisLetterId = Number.parseInt($currentLetter.parent().parent().attr("data-id"));
-    const nextLetterId = (thisLetterId + 1) < 15 ? (thisLetterId + 1) : 0;
+const focusNextEmptyLetter = ($letterInput) => {
+    if($letterInput.val().length === 0) { return; }
 
-    if(nextLetterId === 0) {
-        return;
-    }
+    const thisLetterId = Number.parseInt($letterInput.parent().parent().attr("data-tile-id"));
+    const nextLetterId = thisLetterId + 1;
 
-    const $nextLetter = $(`div[data-id='${nextLetterId}'] input[name='letter']`);
+    if(nextLetterId === 15) { return; }
 
-    if($nextLetter.val().length === 0) {
-        $nextLetter.focus();
+    const $nextLetterInput = $(`section[name='letter-tile'][data-tile-id='${nextLetterId}'] input[name='letter-input']`);
+
+    if($nextLetterInput.val().length === 0) {
+        $nextLetterInput.focus();
     } else {
-        focusNextEmptyLetter($nextLetter);
+        focusNextEmptyLetter($nextLetterInput);
     }
 };
 
 const getLetterElement = (index) => {
-    return $($("input[name='letter']")[index]);
+    return $($("input[name='letter-input']")[index]);
 }
 
 const getLetterWeight = () => {
     const letterWeight = [ ];
 
-    $("input[name='letter']").each(function(index) {
+    $("input[name='letter-input']").each(function(index) {
         const $letter = $(this);
         letterWeight.push({
             id: index,
@@ -73,10 +73,4 @@ const resetLetter = ($letter) => {
     resetHighlight($letter);
 };
 
-const resetLetters = () => {
-    $("input[name='letter']").each(function() {
-        resetLetter($(this));
-    });
-
-    setInfo("Please update the new tiles to solve with.");
-}
+const resetLetters = () => $("input[name='letter-input']").each(function() { resetLetter($(this)); });

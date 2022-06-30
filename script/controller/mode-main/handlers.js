@@ -1,40 +1,30 @@
-$("#mode_main div[name='gameplay']").on("keyup", "input[name='letter']", function() {
+$("#main-mode-container input[name='letter-input']").on("keyup", function() {
     focusNextEmptyLetter($(this));
 });
 
-$("#mode_main div[name='gameplay']").on("click", "button[name='crystal']", function() {
-    toggleEffect($(this), CRYSTAL);
+$("#main-mode-container button[name='tile-effect']").on("click", function() {
+    toggleEffect($(this));
 });
 
-$("#mode_main div[name='gameplay']").on("click", "button[name='plagued']", function() {
-    toggleEffect($(this), PLAGUED);
-});
-
-$("#mode_main div[name='gameplay']").on("click", "button[name='avoid']", function() {
-    toggleEffect($(this), AVOID);
-});
-
-$("#mode_main table[name='results']").on("mouseover", "td", function() {
+$("#main-mode-container table[name='solutions-table']").on("mouseover", "td", function() {
     addHighlights($(this));
 });
 
-$("#mode_main table[name='results']").on("mouseout", "td", function() {
+$("#main-mode-container table[name='solutions-table']").on("mouseout", "td", function() {
     resetHighlights();
 });
 
-$("#mode_main table[name='results']").on("click", "button", function() {
+$("#main-mode-container table[name='solutions-table']").on("click", "button", function() {
     useResult($(this));
 });
 
-$("#mode_main button[name='solve']").click(function() {
-    resetInfo();
+$("#main-mode-actions button[name='solve-action']").click(function() {
     popDetectedAchievements();
     resetDemandForNewLetters();
     getMainResults();
 });
 
-$("#mode_main button[name='reset']").click(function() {
-    resetInfo();
+$("#main-mode-actions button[name='reset-action']").click(function() {
     resetLetters();
     resetDemandForNewLetters();
     resetMainResults();

@@ -1,16 +1,11 @@
 const getHangmanResults = () => {
     resetHangmanResults();
-    setInfo("Solving. Please wait.");
 
     const results = solveHangman();
 
     if(results.length > 0) {
         $("#mode_hangman table[name='results'] tr[name='heading']").show();
-        setInfo("Solved. Picking best options. Please wait.");
         addHangmanResults(results);
-        setInfo("Please select a solution.");
-    } else {
-        setInfo("No solutions found.");
     }
 };
 

@@ -1,200 +1,314 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
     <head>
         <meta charset="UTF-8">
-        <title>Letter Quest Solver</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Meszerus">
         <meta name="description" content="Achievement-hunting tool for the Xbox One game 'Letter Quest'">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./solver.css" />
+        <title>Letter Quest Solver</title>
+        <link rel="stylesheet" href="./style/solver.css" />
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"
                 integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
                 crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"
+                integrity="sha256-0H3Nuz3aug3afVbUlsu12Puxva3CP4EhJtPExqs54Vg="
+                crossorigin="anonymous"></script>
         <script src="./script/controller/init.js"></script>
     </head>
     <body>
-        <h1>Letter Quest Solver</h1>
-        <noscript>
-            <p>If you can see this message, then the tool is broken! Oopsie! This could be because:</p>
-            <ul>
-                <li>You have Javascript disabled in your browser.</li>
-                <li>Your browser version is old and doesn't support modern Javascript (ECMAScript 2018).</li>
-            </ul>
-        </noscript>
-        <div id="tabs" class="tabs">
-            <button name="main" class="tablink">Main Game</button>
-            <button name="hangman" class="tablink">Hangman</button>
-        </div>
-        <div id="mode_main" class="tabcontent">
-            <div>
-                <div name="gameplay" class="parallel problem"><!-- Populated at runtime --></div>
-                <table name="results" class="parallel solution invisible">
-                    <tr name="heading">
-                        <th>Result</th>
-                        <th><!-- Actions --></th>
-                    </tr>
-                    <!-- Populated at runtime -->
-                </table>
-            </div>
-            <div name="conditions">
-                <label for="priority">Optionally, choose a condition to prioritise:</label>
-                <select id="priority" name="priority">
-                    <option selected value="none"></option>
-                    <!-- Populated at runtime -->
-                </select>
-                <select id="priority_specifiedLetter">
-                    <option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option>
-                    <option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option>
-                    <option value="I">I</option><option value="J">J</option><option value="K">K</option><option value="L">L</option>
-                    <option value="M">M</option><option value="N">N</option><option value="O">O</option><option value="P">P</option>
-                    <option value="Q">Q</option><option value="R">R</option><option value="S">S</option><option value="T">T</option>
-                    <option value="U">U</option><option value="V">V</option><option value="W">W</option><option value="X">X</option>
-                    <option value="Y">Y</option><option value="Z">Z</option>
-                </select>
-            </div>
-            <div name="actions">
-                <button name="reset">Reset</button>
-                <button name="solve">Solve!</button>
-            </div>
-        </div>
-        <div id="mode_hangman" class="tabcontent">
-            <div>
-                <div name="gameplay" class="parallel problem">
-                    <div name="guess"><!-- Populated at runtime --></div>
-                    <div name="length">
-                        <p class="descriptor">Word length: <span name="currentLength">10</span></p>
-                        <button name="minus">-</button>
-                        <button name="plus">+</button>
-                    </div>
-                    <div name="incorrectGuess">
-                        <p class="descriptor">Letters incorrectly guessed:</p>
-                        <div name="alphabet">
+        <section class="container">
+            <header><h1>Letter Quest Solver</h1></header>
+            <nav>
+                <button type="button" name="mode-change-action" data-mode="main">Main Game</button>
+                <button type="button" name="mode-change-action" data-mode="hangman">Hangman</button>
+            </nav>
+            <main>
+                <noscript>
+                    <p>If you can see this message, you are unable to initialise the page! Oops! This could be because:</p>
+                    <ul>
+                        <li>You have Javascript disabled in your browser.</li>
+                        <li>Your browser version is old and doesn't support modern Javascript (ECMAScript 2018).</li>
+                    </ul>
+                </noscript>
+                <section id="main-mode-container" class="main-mode mode">
+                    <section class="problem">
+                        <section name="letter-tile" class="letter-tile" data-tile-id="0">
+                            <section class="letter"><input type="text" name="letter-input" class="letter-input" maxlength="1" /></section>
+                            <section class="effects">
+                                <button name="tile-effect" class="tile-effect crystal-option" data-effect="crystal">Crystal</button>
+                                <button name="tile-effect" class="tile-effect plagued-option" data-effect="plagued">Plagued</button>
+                                <button name="tile-effect" class="tile-effect avoid-option" data-effect="avoid">Avoid</button>
+                            </section>
+                        </section>
+                        <section name="letter-tile" class="letter-tile" data-tile-id="1">
+                            <section class="letter"><input type="text" name="letter-input" class="letter-input" maxlength="1" /></section>
+                            <section class="effects">
+                                <button name="tile-effect" class="tile-effect crystal-option" data-effect="crystal">Crystal</button>
+                                <button name="tile-effect" class="tile-effect plagued-option" data-effect="plagued">Plagued</button>
+                                <button name="tile-effect" class="tile-effect avoid-option" data-effect="avoid">Avoid</button>
+                            </section>
+                        </section>
+                        <section name="letter-tile" class="letter-tile" data-tile-id="2">
+                            <section class="letter"><input type="text" name="letter-input" class="letter-input" maxlength="1" /></section>
+                            <section class="effects">
+                                <button name="tile-effect" class="tile-effect crystal-option" data-effect="crystal">Crystal</button>
+                                <button name="tile-effect" class="tile-effect plagued-option" data-effect="plagued">Plagued</button>
+                                <button name="tile-effect" class="tile-effect avoid-option" data-effect="avoid">Avoid</button>
+                            </section>
+                        </section>
+                        <section name="letter-tile" class="letter-tile" data-tile-id="3">
+                            <section class="letter"><input type="text" name="letter-input" class="letter-input" maxlength="1" /></section>
+                            <section class="effects">
+                                <button name="tile-effect" class="tile-effect crystal-option" data-effect="crystal">Crystal</button>
+                                <button name="tile-effect" class="tile-effect plagued-option" data-effect="plagued">Plagued</button>
+                                <button name="tile-effect" class="tile-effect avoid-option" data-effect="avoid">Avoid</button>
+                            </section>
+                        </section>
+                        <section name="letter-tile" class="letter-tile" data-tile-id="4">
+                            <section class="letter"><input type="text" name="letter-input" class="letter-input" maxlength="1" /></section>
+                            <section class="effects">
+                                <button name="tile-effect" class="tile-effect crystal-option" data-effect="crystal">Crystal</button>
+                                <button name="tile-effect" class="tile-effect plagued-option" data-effect="plagued">Plagued</button>
+                                <button name="tile-effect" class="tile-effect avoid-option" data-effect="avoid">Avoid</button>
+                            </section>
+                        </section>
+                        <section name="letter-tile" class="letter-tile" data-tile-id="5">
+                            <section class="letter"><input type="text" name="letter-input" class="letter-input" maxlength="1" /></section>
+                            <section class="effects">
+                                <button name="tile-effect" class="tile-effect crystal-option" data-effect="crystal">Crystal</button>
+                                <button name="tile-effect" class="tile-effect plagued-option" data-effect="plagued">Plagued</button>
+                                <button name="tile-effect" class="tile-effect avoid-option" data-effect="avoid">Avoid</button>
+                            </section>
+                        </section>
+                        <section name="letter-tile" class="letter-tile" data-tile-id="6">
+                            <section class="letter"><input type="text" name="letter-input" class="letter-input" maxlength="1" /></section>
+                            <section class="effects">
+                                <button name="tile-effect" class="tile-effect crystal-option" data-effect="crystal">Crystal</button>
+                                <button name="tile-effect" class="tile-effect plagued-option" data-effect="plagued">Plagued</button>
+                                <button name="tile-effect" class="tile-effect avoid-option" data-effect="avoid">Avoid</button>
+                            </section>
+                        </section>
+                        <section name="letter-tile" class="letter-tile" data-tile-id="7">
+                            <section class="letter"><input type="text" name="letter-input" class="letter-input" maxlength="1" /></section>
+                            <section class="effects">
+                                <button name="tile-effect" class="tile-effect crystal-option" data-effect="crystal">Crystal</button>
+                                <button name="tile-effect" class="tile-effect plagued-option" data-effect="plagued">Plagued</button>
+                                <button name="tile-effect" class="tile-effect avoid-option" data-effect="avoid">Avoid</button>
+                            </section>
+                        </section>
+                        <section name="letter-tile" class="letter-tile" data-tile-id="8">
+                            <section class="letter"><input type="text" name="letter-input" class="letter-input" maxlength="1" /></section>
+                            <section class="effects">
+                                <button name="tile-effect" class="tile-effect crystal-option" data-effect="crystal">Crystal</button>
+                                <button name="tile-effect" class="tile-effect plagued-option" data-effect="plagued">Plagued</button>
+                                <button name="tile-effect" class="tile-effect avoid-option" data-effect="avoid">Avoid</button>
+                            </section>
+                        </section>
+                        <section name="letter-tile" class="letter-tile" data-tile-id="9">
+                            <section class="letter"><input type="text" name="letter-input" class="letter-input" maxlength="1" /></section>
+                            <section class="effects">
+                                <button name="tile-effect" class="tile-effect crystal-option" data-effect="crystal">Crystal</button>
+                                <button name="tile-effect" class="tile-effect plagued-option" data-effect="plagued">Plagued</button>
+                                <button name="tile-effect" class="tile-effect avoid-option" data-effect="avoid">Avoid</button>
+                            </section>
+                        </section>
+                        <section name="letter-tile" class="letter-tile" data-tile-id="10">
+                            <section class="letter"><input type="text" name="letter-input" class="letter-input" maxlength="1" /></section>
+                            <section class="effects">
+                                <button name="tile-effect" class="tile-effect crystal-option" data-effect="crystal">Crystal</button>
+                                <button name="tile-effect" class="tile-effect plagued-option" data-effect="plagued">Plagued</button>
+                                <button name="tile-effect" class="tile-effect avoid-option" data-effect="avoid">Avoid</button>
+                            </section>
+                        </section>
+                        <section name="letter-tile" class="letter-tile" data-tile-id="11">
+                            <section class="letter"><input type="text" name="letter-input" class="letter-input" maxlength="1" /></section>
+                            <section class="effects">
+                                <button name="tile-effect" class="tile-effect crystal-option" data-effect="crystal">Crystal</button>
+                                <button name="tile-effect" class="tile-effect plagued-option" data-effect="plagued">Plagued</button>
+                                <button name="tile-effect" class="tile-effect avoid-option" data-effect="avoid">Avoid</button>
+                            </section>
+                        </section>
+                        <section name="letter-tile" class="letter-tile" data-tile-id="12">
+                            <section class="letter"><input type="text" name="letter-input" class="letter-input" maxlength="1" /></section>
+                            <section class="effects">
+                                <button name="tile-effect" class="tile-effect crystal-option" data-effect="crystal">Crystal</button>
+                                <button name="tile-effect" class="tile-effect plagued-option" data-effect="plagued">Plagued</button>
+                                <button name="tile-effect" class="tile-effect avoid-option" data-effect="avoid">Avoid</button>
+                            </section>
+                        </section>
+                        <section name="letter-tile" class="letter-tile" data-tile-id="13">
+                            <section class="letter"><input type="text" name="letter-input" class="letter-input" maxlength="1" /></section>
+                            <section class="effects">
+                                <button name="tile-effect" class="tile-effect crystal-option" data-effect="crystal">Crystal</button>
+                                <button name="tile-effect" class="tile-effect plagued-option" data-effect="plagued">Plagued</button>
+                                <button name="tile-effect" class="tile-effect avoid-option" data-effect="avoid">Avoid</button>
+                            </section>
+                        </section>
+                        <section name="letter-tile" class="letter-tile" data-tile-id="14">
+                            <section class="letter"><input type="text" name="letter-input" class="letter-input" maxlength="1" /></section>
+                            <section class="effects">
+                                <button name="tile-effect" class="tile-effect crystal-option" data-effect="crystal">Crystal</button>
+                                <button name="tile-effect" class="tile-effect plagued-option" data-effect="plagued">Plagued</button>
+                                <button name="tile-effect" class="tile-effect avoid-option" data-effect="avoid">Avoid</button>
+                            </section>
+                        </section>
+                    </section>
+                    <section class="solutions">
+                        <table name="solutions-table" class="solutions-table">
+                            <tr name="heading">
+                                <th name="result">Result</th>
+                                <th name="actions"></th>
+                            </tr>
+                            <!-- Populated at runtime -->
+                        </table>
+                    </section>
+                    <section class="conditions">
+                        <label for="priority">Optionally, choose a condition to prioritise:</label>
+                        <select id="priority">
+                            <option selected value="none"></option>
+                            <!-- Populated at runtime -->
+                        </select>
+                        <select id="priority-specified-letter" style="display: none;">
+                            <option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option>
+                            <option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option>
+                            <option value="I">I</option><option value="J">J</option><option value="K">K</option><option value="L">L</option>
+                            <option value="M">M</option><option value="N">N</option><option value="O">O</option><option value="P">P</option>
+                            <option value="Q">Q</option><option value="R">R</option><option value="S">S</option><option value="T">T</option>
+                            <option value="U">U</option><option value="V">V</option><option value="W">W</option><option value="X">X</option>
+                            <option value="Y">Y</option><option value="Z">Z</option>
+                        </select>
+                    </section>
+                    <section id="main-mode-actions" class="actions">
+                        <button type="button" name="reset-action">Reset</button>
+                        <button type="button" name="solve-action">Solve!</button>
+                    </section>
+                </section>
+               <section id="hangman-mode-container" class="hangman-mode mode" style="display: none;">
+                    <section name="problem" class="problem">
+                        <input type="text" name="letter-input" class="letter-input" maxlength="1" />
+                        <input type="text" name="letter-input" class="letter-input" maxlength="1" />
+                        <input type="text" name="letter-input" class="letter-input" maxlength="1" />
+                        <input type="text" name="letter-input" class="letter-input" maxlength="1" />
+                        <input type="text" name="letter-input" class="letter-input" maxlength="1" />
+                        <input type="text" name="letter-input" class="letter-input" maxlength="1" />
+                        <input type="text" name="letter-input" class="letter-input" maxlength="1" />
+                        <input type="text" name="letter-input" class="letter-input" maxlength="1" />
+                        <input type="text" name="letter-input" class="letter-input" maxlength="1" />
+                        <input type="text" name="letter-input" class="letter-input" maxlength="1" />
+                    </section>
+                    <section name="solutions" class="solutions">
+                        <table name="solutions-table" class="solutions-table">
+                            <tr name="heading">
+                                <th name="result">Result</th>
+                                <th name="actions"></th>
+                            </tr>
+                            <!-- Populated at runtime -->
+                        </table>
+                    </section>
+                    <section class="conditions">
+                        <section class="word-length">
+                            <p class="descriptor">Word length: <span name="currentLength">10</span></p>
+                            <button name="minus">-</button>
+                            <button name="plus">+</button>
+                        </section>
+                        <section class="guesses">
+                            <p class="descriptor">Letters incorrectly guessed:</p>
                             <button>Q</button><button>W</button><button>E</button><button>R</button><button>T</button><button>Y</button><button>U</button><button>I</button><button>O</button><button>P</button>
                             <br />
                             <button>A</button><button>S</button><button>D</button><button>F</button><button>G</button><button>H</button><button>J</button><button>K</button><button>L</button>
                             <br />
                             <button>Z</button><button>X</button><button>C</button><button>V</button><button>B</button><button>N</button><button>M</button>
-                        </div>
+                        </section>
+                    </section>
+                    <section id="hangman-mode-actions" class="actions">
+                        <button type="button" name="reset-action">Reset</button>
+                        <button type="button" name="solve-action">Solve!</button>
+                    </section>
+               </section>
+                <section id="achievements" class="achievements">
+                    <div class="achievement-intro">
+                        <p>Select only the achievements you have yet to unlock, so the tool can better prioritise solutions, and you can pop them quicker.</p>
                     </div>
-                </div>
-                <table name="results" class="parallel solution invisible">
-                    <tr name="heading">
-                        <th>Result</th>
-                    </tr>
-                    <!-- Populated at runtime -->
-                </table>
-            </div>
-            <div name="actions">
-                <button name="reset">Reset</button>
-                <button name="solve">Solve!</button>
-            </div>
-        </div>
-        <p id="info"><!-- Populated at runtime --></p>
-        <p id="instructions">
-            <strong>Instruction:</strong>
-            Fill in the tiles and their status as they appear in your game.
-            Then hit "Solve" to obtain word matches that best work for you.
-        </p>
-        <label for="achievements">Achievement-hunting config: <span id="toggleAchievementsPanel" class="link">show</span></label>
-        <div id="achievements">
-            <p>Select only the achievements you have yet to unlock, so the tool can be quicker and better prioritise solutions, and you can pop them quicker.</p>
-            <input type="checkbox" id="achievement_allPlaguedOut" name="achievement" value="allPlaguedOut" checked="checked" />
-            <label for="achievement_allPlaguedOut">
-                <strong>All Plagued Out</strong>: Fill the entire board with plague tiles.
-            </label>
-            <br />
-            <input type="checkbox" id="achievement_aManAPlan" name="achievement" value="aManAPlan" checked="checked" />
-            <label for="achievement_aManAPlan">
-                <strong>A Man, A Plan</strong>: Spell 25 palindromes.
-            </label>
-            <br />
-            <input type="checkbox" id="achievement_crystalConqueror" name="achievement" value="crystalConqueror" checked="checked" />
-            <label for="achievement_crystalConqueror">
-                <strong>Crystal Conqueror</strong>: Spelled a word containing two or more crystals.
-            </label>
-            <br />
-            <input type="checkbox" id="achievement_ehEeeEyeOweYou" name="achievement" value="ehEeeEyeOweYou" checked="checked" />
-            <label for="achievement_ehEeeEyeOweYou">
-                <strong>Eh Eee Eye Owe You</strong>: Use 2,500 vowels.
-            </label>
-            <br />
-            <input type="checkbox" id="achievement_feelingReallyGood" name="achievement" value="feelingReallyGood" checked="checked" />
-            <label for="achievement_feelingReallyGood">
-                <strong>Feeling Really Good</strong>: Spell 200 double-letter words.
-            </label>
-            <br />
-            <input type="checkbox" id="achievement_honoraryBaconBandit" name="achievement" value="honoraryBaconBandit" checked="checked" />
-            <label for="achievement_honoraryBaconBandit">
-                <strong>Honorary Bacon Bandit</strong>: Spell the word Bandits.
-            </label>
-            <br />
-            <input type="checkbox" id="achievement_inTheCorner" name="achievement" value="inTheCorner" checked="checked" />
-            <label for="achievement_inTheCorner">
-                <strong>In The Corner</strong>: Use 500 corner letters.
-            </label>
-            <br />
-            <input type="checkbox" id="achievement_itsBacon" name="achievement" value="itsBacon" checked="checked" />
-            <label for="achievement_itsBacon">
-                <strong>It's Bacon</strong>: Spell the word Bacon.
-            </label>
-            <br />
-            <input type="checkbox" id="achievement_myPrecious" name="achievement" value="myPrecious" checked="checked" />
-            <label for="achievement_myPrecious">
-                <strong>My Precious</strong>: Use 100 crystal tiles.
-            </label>
-            <br />
-            <input type="checkbox" id="achievement_octoberfest" name="achievement" value="octoberfest" checked="checked" />
-            <label for="achievement_octoberfest">
-                <strong>Octoberfest</strong>: Spelled 5 eight-letter words.
-            </label>
-            <br />
-            <input type="checkbox" id="achievement_prevention" name="achievement" value="prevention" checked="checked" />
-            <label for="achievement_prevention">
-                <strong>Prevention</strong>: Use 25 plague tiles.
-            </label>
-            <br />
-            <input type="checkbox" id="achievement_rowYourBoat" name="achievement" value="rowYourBoat" checked="checked" />
-            <label for="achievement_rowYourBoat">
-                <strong>Row Row Row Your Boat</strong>: Used an entire row in one word 3 times.
-            </label>
-            <br />
-            <input type="checkbox" id="achievement_seeYouInSeptember" name="achievement" value="seeYouInSeptember" checked="checked" />
-            <label for="achievement_seeYouInSeptember">
-                <strong>See You In September</strong>: Spelled 10 seven-letter words.
-            </label>
-            <br />
-            <input type="checkbox" id="achievement_sixPack" name="achievement" value="sixPack" checked="checked" />
-            <label for="achievement_sixPack">
-                <strong>Six Pack</strong>: Spell 50 six-letter words.
-            </label>
-            <br />
-            <input type="checkbox" id="achievement_topShelf" name="achievement" value="topShelf" checked="checked" />
-            <label for="achievement_topShelf">
-                <strong>Top Shelf</strong>: Use 500 letters from the top row.
-            </label>
-            <br />
-            <input type="checkbox" id="achievement_why" name="achievement" value="why" checked="checked" />
-            <label for="achievement_why">
-                <strong>Why</strong>: Spell 3 words with no vowels.
-            </label>
-            <br />
-            <input type="checkbox" id="achievement_yayEverydayRoyalty" name="achievement" value="yayEverydayRoyalty" checked="checked" />
-            <label for="achievement_yayEverydayRoyalty">
-                <strong>Yay Everyday Royalty</strong>: Spell a word that contains two Ys.
-            </label>
-            <br />
-            <span id="configAchievementsAll" class="link">Select all</span>
-            <br />
-            <span id="configAchievementsNone" class="link">Select none</span>
-        </div>
-        </div>
-        <footer>
-            Made by <a href="https://www.trueachievements.com/gamer/Meszerus" target="_blank">Meszerus</a>.
-            My other work can be found on <a href="https://github.com/Meszerus" target="_blank">Github</a>.
-        </footer>
+                    <div class="achievement">
+                        <input type="checkbox" id="achievement_allPlaguedOut" name="achievement" value="allPlaguedOut" checked="checked" />
+                        <label for="achievement_allPlaguedOut"><strong>All Plagued Out</strong>: Fill the entire board with plague tiles.</label>
+                    </div>
+                    <div class="achievement">
+                        <input type="checkbox" id="achievement_aManAPlan" name="achievement" value="aManAPlan" checked="checked" />
+                        <label for="achievement_aManAPlan"><strong>A Man, A Plan</strong>: Spell 25 palindromes.</label>
+                    </div>
+                    <div class="achievement">
+                        <input type="checkbox" id="achievement_crystalConqueror" name="achievement" value="crystalConqueror" checked="checked" />
+                        <label for="achievement_crystalConqueror"><strong>Crystal Conqueror</strong>: Spelled a word containing two or more crystals.</label>
+                    </div>
+                    <div class="achievement">
+                        <input type="checkbox" id="achievement_ehEeeEyeOweYou" name="achievement" value="ehEeeEyeOweYou" checked="checked" />
+                        <label for="achievement_ehEeeEyeOweYou"><strong>Eh Eee Eye Owe You</strong>: Use 2,500 vowels.</label>
+                    </div>
+                    <div class="achievement">
+                        <input type="checkbox" id="achievement_feelingReallyGood" name="achievement" value="feelingReallyGood" checked="checked" />
+                        <label for="achievement_feelingReallyGood"><strong>Feeling Really Good</strong>: Spell 200 double-letter words.</label>
+                    </div>
+                    <div class="achievement">
+                        <input type="checkbox" id="achievement_honoraryBaconBandit" name="achievement" value="honoraryBaconBandit" checked="checked" />
+                        <label for="achievement_honoraryBaconBandit"><strong>Honorary Bacon Bandit</strong>: Spell the word Bandits.</label>
+                    </div>
+                    <div class="achievement">
+                        <input type="checkbox" id="achievement_inTheCorner" name="achievement" value="inTheCorner" checked="checked" />
+                        <label for="achievement_inTheCorner"><strong>In The Corner</strong>: Use 500 corner letters.</label>
+                    </div>
+                    <div class="achievement">
+                        <input type="checkbox" id="achievement_itsBacon" name="achievement" value="itsBacon" checked="checked" />
+                        <label for="achievement_itsBacon"><strong>It's Bacon</strong>: Spell the word Bacon.</label>
+                    </div>
+                    <div class="achievement">
+                        <input type="checkbox" id="achievement_myPrecious" name="achievement" value="myPrecious" checked="checked" />
+                        <label for="achievement_myPrecious"><strong>My Precious</strong>: Use 100 crystal tiles.</label>
+                    </div>
+                    <div class="achievement">
+                        <input type="checkbox" id="achievement_octoberfest" name="achievement" value="octoberfest" checked="checked" />
+                        <label for="achievement_octoberfest"><strong>Octoberfest</strong>: Spelled 5 eight-letter words.</label>
+                    </div>
+                    <div class="achievement">
+                        <input type="checkbox" id="achievement_prevention" name="achievement" value="prevention" checked="checked" />
+                        <label for="achievement_prevention"><strong>Prevention</strong>: Use 25 plague tiles.</label>
+                    </div>
+                    <div class="achievement">
+                        <input type="checkbox" id="achievement_rowYourBoat" name="achievement" value="rowYourBoat" checked="checked" />
+                        <label for="achievement_rowYourBoat"><strong>Row Row Row Your Boat</strong>: Used an entire row in one word 3 times.</label>
+                    </div>
+                    <div class="achievement">
+                        <input type="checkbox" id="achievement_seeYouInSeptember" name="achievement" value="seeYouInSeptember" checked="checked" />
+                        <label for="achievement_seeYouInSeptember"><strong>See You In September</strong>: Spelled 10 seven-letter words.</label>
+                    </div>
+                    <div class="achievement">
+                        <input type="checkbox" id="achievement_sixPack" name="achievement" value="sixPack" checked="checked" />
+                        <label for="achievement_sixPack"><strong>Six Pack</strong>: Spell 50 six-letter words.</label>
+                    </div>
+                    <div class="achievement">
+                        <input type="checkbox" id="achievement_topShelf" name="achievement" value="topShelf" checked="checked" />
+                        <label for="achievement_topShelf"><strong>Top Shelf</strong>: Use 500 letters from the top row.</label>
+                    </div>
+                    <div class="achievement">
+                        <input type="checkbox" id="achievement_why" name="achievement" value="why" checked="checked" />
+                        <label for="achievement_why"><strong>Why</strong>: Spell 3 words with no vowels.</label>
+                    </div>
+                    <div class="achievement">
+                        <input type="checkbox" id="achievement_yayEverydayRoyalty" name="achievement" value="yayEverydayRoyalty" checked="checked" />
+                        <label for="achievement_yayEverydayRoyalty"><strong>Yay Everyday Royalty</strong>: Spell a word that contains two Ys.</label>
+                    </div>
+                    <div class="achievement-select-util">
+                        <button type="button" name="achievements-selection-action" data-action="all">Select all</button>
+                        <button type="button" name="achievements-selection-action" data-action="none">Select none</button>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <p>Made by <a href="https://www.trueachievements.com/gamer/Meszerus" target="_blank">Meszerus</a>.
+                My other work can be found on <a href="https://github.com/Meszerus" target="_blank">Github</a>.</p>
+            </footer>
+        </section>
         <script src="script/controller/handlers.js"></script>
-        <script src="script/controller/info.js"></script>
         <script src="script/controller/mode.js"></script>
         <script src="script/controller/mode-hangman/alphabet.js"></script>
         <script src="script/controller/mode-hangman/guess.js"></script>

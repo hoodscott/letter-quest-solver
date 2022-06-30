@@ -7,15 +7,19 @@ const getEffect = ($letter) => {
 };
 
 const applyEffect = ($letter, effect) => {
+    resetEffect($letter);
     $letter.attr("data-effect", effect);
+    $letter.addClass(effect);
 };
 
 const resetEffect = ($letter) => {
     $letter.attr("data-effect", "");
+    $letter.removeClass(`${CRYSTAL} ${PLAGUED} ${AVOID}`);
 };
 
-const toggleEffect = ($this, effect) => {
-    const $letter = $this.parent().parent().find("input[name='letter']");
+const toggleEffect = ($this) => {
+    const effect = $this.attr("data-effect");
+    const $letter = $this.parent().parent().find("input[name='letter-input']");
 
     if(getEffect($letter) === effect) {
         resetEffect($letter);

@@ -1,0 +1,129 @@
+:root {
+    --highlight-color: blue;
+}
+
+body {
+    margin: 0%;
+    background-color: darkgray;
+}
+
+section.container {
+    display: grid;
+    grid-auto-rows: minmax(40px, auto);
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+main {
+    display: grid;
+}
+
+section.mode {
+    align-items: center;
+    display: grid;
+    grid-auto-rows: minmax(40px, auto);
+    grid-template-columns: 3fr 1fr;
+    justify-items: center;
+}
+
+#main-mode-container section.problem {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+}
+
+#hangman-mode-container section.problem {
+    display: flex;
+}
+
+#hangman-mode-container section.conditions {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+#main-mode-container section.letter-tile {
+    display: grid;
+    padding: 3%;
+    width: 80%;
+}
+
+section.letter {
+    display: flex;
+    justify-content: center;
+}
+
+section.effects {
+    display: flex;
+    flex-flow: column;
+}
+
+#main-mode-container input.letter-input {
+    font-size: 400%;
+    font-variant: all-small-caps;
+    text-align: center;
+    width: 100%;
+    border-color: inherit;
+    border-width: medium;
+}
+
+#hangman-mode-container input.letter-input {
+    font-size: 200%;
+    font-variant: all-small-caps;
+    text-align: center;
+    width: 80%;
+    border-color: inherit;
+    border-width: medium;
+}
+
+section.solutions {
+    align-items: center;
+    display: flex;
+}
+
+section.achievements {
+    display: grid;
+}
+
+.solutions-table {
+    display: none;
+}
+
+button.crystal-option {
+    color: cornflowerblue;
+}
+
+input.crystal {
+    background-color: cornflowerblue;
+}
+
+button.plagued-option {
+    color: indianred;
+}
+
+input.plagued {
+    background-color: indianred;
+}
+
+button.avoid-option {
+    color: grey;
+}
+
+input.avoid {
+    background-color: grey;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.highlight {
+    border-color: var(--highlight-color) !important;
+}
+
+tr[name='result'] {
+    height: 60px;
+}
+
+tr[name='result'] td {
+    border-bottom: 1px solid #ddd;
+}

@@ -1,20 +1,12 @@
-$("#toggleAchievementsPanel").click(function() {
-    toggleAchievementPanel();
-});
-
-$("input[name='achievement']").change(function() {
+$("input[name='achievement']").on("change", function() {
     updateAchievementArray($(this));
 });
 
-$("#configAchievementsAll").click(function() {
-    updateAchievementTogglesAsBlanket(true);
+$("button[name='achievements-selection-action']").on("click", function() {
+    updateAchievementTogglesAsBlanket($(this).attr("data-action") === "all");
 });
 
-$("#configAchievementsNone").click(function() {
-    updateAchievementTogglesAsBlanket(false);
-});
-
-$(".tablink").click(function() {
+$("button[name='mode-change-action']").on("click", function() {
     resetSelectedPanel();
     changeSelectedPanel($(this));
 });

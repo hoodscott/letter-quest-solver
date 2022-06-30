@@ -1,13 +1,14 @@
 const resetSelectedPanel = () => {
-    $(".tabcontent").hide();
-    $(".tablink").removeClass("active");
+    $(".mode").hide();
+    $("button[name='mode-change-action']").removeClass("active");
 };
 
 const changeSelectedPanel = ($tab) => {
     $tab.addClass("active");
-    $("#mode_" + $tab.attr("name")).show();
+    const selectedMode = $tab.attr("data-mode");
+    $(`#${selectedMode}-mode-container`).show();
 };
 
 const showMainModePanel = () => {
-  $("#tabs button[name='main']").trigger("click");
+  $("nav button[name='main']").trigger("click");
 };

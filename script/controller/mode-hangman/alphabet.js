@@ -1,5 +1,5 @@
 const enableLetter = ($this) => {
-  $("#mode_hangman div[name='alphabet'] button").each(function() {
+  $("#hangman-mode-container div[name='alphabet'] button").each(function() {
     if($(this).text().toLowerCase() === $this.val().toLowerCase()) {
       $(this).prop("disabled", false);
     }
@@ -9,7 +9,7 @@ const enableLetter = ($this) => {
 const disableLetter = ($this) => {
   let alreadyUsedLetter;
 
-  $("#mode_hangman input[name='guessLetter']").each(function() {
+  $("#hangman-mode-container input[name='letter-input']").each(function() {
     if($(this).val().toLowerCase() === $this.text().toLowerCase()) {
       alreadyUsedLetter = true;
     }
@@ -23,7 +23,7 @@ const disableLetter = ($this) => {
 const getInvalidLetters = () => {
   const invalidLetters = [ ];
 
-  $("#mode_hangman div[name='alphabet'] button:disabled").each(function() {
+  $("#hangman-mode-container div[name='alphabet'] button:disabled").each(function() {
     invalidLetters.push($(this).text().toLowerCase());
   });
 
@@ -31,7 +31,7 @@ const getInvalidLetters = () => {
 };
 
 const resetHangmanLetters = () => {
-  $("#mode_hangman div[name='alphabet'] button:disabled").each(function() {
+  $("#hangman-mode-container div[name='alphabet'] button:disabled").each(function() {
     $(this).prop("disabled", false);
   });
 };

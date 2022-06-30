@@ -1,4 +1,4 @@
-const ACHIEVEMENTS_TOGGLE_COOKIE_NAME = "achievements";
+const ACHIEVEMENTS_TOGGLE_COOKIE_NAME = "letter-quest-achievements";
 let achievements = {
     allPlaguedOut: true,
     aManAPlan: true,
@@ -22,7 +22,7 @@ let achievements = {
 const loadAchievementsToggle = () => {
     if(!Cookies.get(ACHIEVEMENTS_TOGGLE_COOKIE_NAME)) { return; }
 
-    achievements = JSON.parse(Cookies.get(ACHIEVEMENTS_TOGGLE_COOKIE_NAME));
+    achievements = JSON.parse(decodeURI(Cookies.get(ACHIEVEMENTS_TOGGLE_COOKIE_NAME)));
 
     Object.entries(achievements).forEach(achievement => {
         const achievementName = achievement[0];
@@ -32,14 +32,8 @@ const loadAchievementsToggle = () => {
 };
 
 const saveAchievementsToggle = () => {
-    Cookies.set(ACHIEVEMENTS_TOGGLE_COOKIE_NAME, JSON.stringify(achievements),
-        { expires: 365, path: "/letter-quest-solver" });
-};
-
-const toggleAchievementPanel = () => {
-    $("#achievements").slideToggle(500, function() {
-        $(this).is(":visible") ? $("#toggleAchievements").text("hide") : $("#toggleAchievements").text("show");
-    });
+    Cookies.set(ACHIEVEMENTS_TOGGLE_COOKIE_NAME, encodeURI(JSON.stringify(achievements)),
+        { expires: 365, path: "/" });
 };
 
 const updateAchievementArray = ($achievement) => {
