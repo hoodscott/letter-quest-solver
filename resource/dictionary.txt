@@ -15960,7 +15960,6 @@ resistible
 resolutely
 resolution
 resolvable
-resolvedly
 resonances
 resonantly
 resonating
@@ -17183,7 +17182,6 @@ unerringly
 unescorted
 unevenness
 uneventful
-unexacting
 unexamined
 unexpanded
 unexpected
@@ -20623,7 +20621,6 @@ flaunting
 flautists
 flavoured
 fledgling
-fleetwood
 fleshpots
 flickered
 flinching
@@ -21714,7 +21711,6 @@ justifies
 justinian
 juveniles
 juxtapose
-kalamazoo
 kampuchea
 kangaroos
 keepsakes
@@ -21724,7 +21720,6 @@ kettleful
 keyboards
 keynesian
 keystroke
-kibbutzim
 kickbacks
 kidnapped
 kidnapper
@@ -22490,7 +22485,6 @@ norwegian
 nosebleed
 nostalgia
 nostalgic
-notarised
 notarized
 notations
 notebooks
@@ -23339,7 +23333,6 @@ pulsation
 pulverise
 pulverize
 pummelled
-punchbowl
 punctuate
 punctured
 punctures
@@ -25901,7 +25894,6 @@ airborne
 airbrush
 aircraft
 airdrome
-airedale
 airfield
 airframe
 airiness
@@ -26105,7 +26097,6 @@ armament
 armature
 armbands
 armchair
-armenian
 armholes
 armorial
 armoured
@@ -28505,7 +28496,6 @@ embedded
 embedder
 embezzle
 embitter
-embleton
 embodied
 embodies
 embolden
@@ -29050,7 +29040,6 @@ flippers
 flipping
 flirting
 flitting
-flixweed
 floaters
 floating
 flocking
@@ -29550,7 +29539,6 @@ hairiest
 hairless
 hairline
 hairpins
-haitians
 halberds
 halfback
 hallmark
@@ -30607,7 +30595,6 @@ mappings
 marathon
 marauded
 marauder
-marazion
 marbling
 marchers
 marching
@@ -31101,7 +31088,6 @@ nostrils
 notables
 notarial
 notaries
-notarise
 notarize
 notation
 notching
@@ -31488,7 +31474,6 @@ particle
 partings
 partisan
 partners
-pasadena
 passable
 passably
 passages
@@ -32590,7 +32575,6 @@ rollback
 rollmops
 romanced
 romances
-romanian
 romantic
 roofless
 rooftops
@@ -32647,7 +32631,6 @@ runabout
 runaways
 ruptured
 ruptures
-rushmore
 russians
 rustiest
 rustlers
@@ -32709,7 +32692,6 @@ santiago
 sapience
 saplings
 sapphire
-sarajevo
 sarcasms
 sardines
 sardonic
@@ -35539,7 +35521,6 @@ bassoon
 bastard
 basting
 bastion
-batavia
 batched
 batches
 bateaux
@@ -36944,7 +36925,6 @@ crusted
 crybaby
 cryptic
 crystal
-cubbing
 cubbish
 cubical
 cubicle
@@ -39134,7 +39114,6 @@ hotbeds
 hotdogs
 hotfoot
 hothead
-hotkeys
 hotline
 hotness
 hotshot
@@ -39148,7 +39127,6 @@ however
 howlers
 howling
 hoylake
-huainin
 huddled
 huddles
 huffers
@@ -40190,7 +40168,6 @@ melanin
 melilot
 mellows
 melodic
-melrose
 melting
 members
 memento
@@ -46463,7 +46440,6 @@ dunces
 dundee
 dunked
 dunned
-dunoon
 dupers
 duping
 duplex
@@ -47611,7 +47587,6 @@ hotbed
 hotbox
 hotdog
 hotels
-hotkey
 hotpot
 hotrod
 hotter
@@ -47939,7 +47914,6 @@ kerned
 kernel
 kettle
 keying
-keynes
 keypad
 kicked
 kicker
@@ -52186,7 +52160,6 @@ boggy
 bogie
 bogus
 boils
-boink
 bokeh
 bolas
 bolds

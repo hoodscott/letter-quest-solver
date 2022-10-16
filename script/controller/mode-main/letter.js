@@ -48,13 +48,13 @@ const focusNextEmptyLetter = ($letterInput) => {
 };
 
 const getLetterElement = (index) => {
-    return $($("input[name='letter-input']")[index]);
+    return $($("#hangman-mode-container input[name='letter-input']")[index]);
 }
 
 const getLetterWeight = () => {
     const letterWeight = [ ];
 
-    $("input[name='letter-input']").each(function(index) {
+    $("#hangman-mode-container input[name='letter-input']").each(function(index) {
         const $letter = $(this);
         letterWeight.push({
             id: index,
@@ -73,4 +73,4 @@ const resetLetter = ($letter) => {
     resetHighlight($letter);
 };
 
-const resetLetters = () => $("input[name='letter-input']").each(function() { resetLetter($(this)); });
+const resetLetters = () => $("#hangman-mode-container input[name='letter-input']").each(function() { resetLetter($(this)); });
