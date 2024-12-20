@@ -93,7 +93,7 @@ const getCrystalConquerorWordWeight = (match) => {
     let crystalsUsed = 0;
 
     for(let i = 0; i < match.matchIndexes.length; i++) {
-        crystalsUsed += getEffect($($("#hangman-mode-container input[name='letter-input']")[match.matchIndexes[i]])) === CRYSTAL;
+        crystalsUsed += getEffect($($("#main-mode-container input[name='letter-input']")[match.matchIndexes[i]])) === CRYSTAL;
     }
 
     return getAchievementWeight(achievements.crystalConqueror,

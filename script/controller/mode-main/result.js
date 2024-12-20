@@ -34,7 +34,7 @@ const addMainResults = (results) => {
 const useResult = ($result) => {
     const idsUsed = $result.parent().parent().attr("data-ids");
 
-    $("#hangman-mode-container input[name='letter-input']").each(function() {
+    $("#main-mode-container input[name='letter-input']").each(function() {
         const thisLetterId = $(this).parent().parent().attr("data-tile-id");
 
         if(idsUsed.includes("," + thisLetterId + ",")) {
@@ -49,7 +49,7 @@ const useResult = ($result) => {
 const addHighlights = ($result) => {
     const idsUsed = $result.parent().attr("data-ids");
 
-    $("#hangman-mode-container input[name='letter-input']").each(function() {
+    $("#main-mode-container input[name='letter-input']").each(function() {
         const thisLetterId = $(this).parent().parent().attr("data-tile-id");
         
         if(idsUsed.includes("," + thisLetterId + ",")) {
@@ -63,7 +63,7 @@ const resetHighlight = ($letter) => {
 };
 
 const resetHighlights = () => {
-    $("#hangman-mode-container input[name='letter-input']").each(function() {
+    $("#main-mode-container input[name='letter-input']").each(function() {
         resetHighlight($(this));
     });
 };
@@ -78,7 +78,7 @@ const addDemandForNewLetter = ($letter) => {
 };
 
 const resetDemandForNewLetters = () => {
-    $("#hangman-mode-container input[name='letter-input']").each(function() {
+    $("#main-mode-container input[name='letter-input']").each(function() {
         $(this).parent().parent().removeClass("demand");
     });
 };
